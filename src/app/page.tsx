@@ -161,15 +161,15 @@ export default function Home() {
           </Badge>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-            Discover Your{" "}
+            Take Our Free{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-              True IQ
+              IQ Test
             </span>{" "}
-            in 20 Minutes
+            and Discover Your True Intelligence in 20 Minutes
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
+            Our scientifically validated IQ test measures your cognitive
             abilities across pattern recognition, logical reasoning, and spatial
             awareness. Free to take, instant results.
           </p>
