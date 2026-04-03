@@ -1,0 +1,438 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Free IQ Test Online | Certified Intelligence Assessment</title>
+  <meta name="description" content="Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.">
+  <meta name="keywords" content="IQ test, intelligence test, free IQ test, online IQ test, cognitive assessment">
+  <link rel="canonical" href="https://testwebsite.example.com/">
+  <meta property="og:title" content="Free IQ Test Online | Certified Intelligence Assessment">
+  <meta property="og:description" content="Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.">
+  <meta property="og:type" content="website">
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      background: #0a0a0f;
+      color: #e5e5e5;
+      line-height: 1.6;
+    }
+
+    /* Nav */
+    nav {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid #1a1a2e;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    .logo {
+      font-size: 1.25rem;
+      font-weight: 700;
+      color: #fff;
+      text-decoration: none;
+    }
+
+    .logo span { color: #6366f1; }
+
+    nav ul {
+      list-style: none;
+      display: flex;
+      gap: 2rem;
+    }
+
+    nav a {
+      color: #888;
+      text-decoration: none;
+      font-size: 0.875rem;
+      transition: color 0.2s;
+    }
+
+    nav a:hover { color: #fff; }
+
+    /* Hero */
+    .hero {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 6rem 2rem 4rem;
+      text-align: center;
+    }
+
+    .badge {
+      display: inline-block;
+      padding: 0.25rem 0.75rem;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      border: 1px solid rgba(99, 102, 241, 0.3);
+      border-radius: 100px;
+      font-size: 0.75rem;
+      font-weight: 500;
+      margin-bottom: 1.5rem;
+    }
+
+    h1 {
+      font-size: 3.5rem;
+      font-weight: 800;
+      line-height: 1.1;
+      color: #fff;
+      margin-bottom: 1.5rem;
+      letter-spacing: -0.02em;
+    }
+
+    h1 em {
+      font-style: normal;
+      background: linear-gradient(135deg, #6366f1, #a78bfa);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+    }
+
+    .hero p {
+      font-size: 1.125rem;
+      color: #888;
+      max-width: 560px;
+      margin: 0 auto 2.5rem;
+    }
+
+    .cta-group {
+      display: flex;
+      gap: 1rem;
+      justify-content: center;
+      flex-wrap: wrap;
+    }
+
+    .btn {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.5rem;
+      padding: 0.875rem 2rem;
+      border-radius: 12px;
+      font-size: 1rem;
+      font-weight: 600;
+      text-decoration: none;
+      transition: all 0.2s;
+      cursor: pointer;
+      border: none;
+    }
+
+    .btn-primary {
+      background: #6366f1;
+      color: #fff;
+    }
+
+    .btn-primary:hover {
+      background: #4f46e5;
+      transform: translateY(-1px);
+      box-shadow: 0 8px 24px rgba(99, 102, 241, 0.3);
+    }
+
+    .btn-secondary {
+      background: transparent;
+      color: #ccc;
+      border: 1px solid #333;
+    }
+
+    .btn-secondary:hover {
+      border-color: #555;
+      color: #fff;
+    }
+
+    /* Stats */
+    .stats {
+      display: flex;
+      justify-content: center;
+      gap: 3rem;
+      padding: 3rem 2rem;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .stat {
+      text-align: center;
+    }
+
+    .stat-number {
+      font-size: 2rem;
+      font-weight: 700;
+      color: #fff;
+    }
+
+    .stat-label {
+      font-size: 0.8rem;
+      color: #666;
+      margin-top: 0.25rem;
+    }
+
+    /* Features */
+    .features {
+      max-width: 1000px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .features h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .features > p {
+      text-align: center;
+      color: #666;
+      margin-bottom: 3rem;
+    }
+
+    .feature-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 1.5rem;
+    }
+
+    .feature-card {
+      background: #111118;
+      border: 1px solid #1a1a2e;
+      border-radius: 16px;
+      padding: 2rem;
+    }
+
+    .feature-icon {
+      width: 48px;
+      height: 48px;
+      border-radius: 12px;
+      background: rgba(99, 102, 241, 0.1);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-size: 1.5rem;
+      margin-bottom: 1rem;
+    }
+
+    .feature-card h3 {
+      font-size: 1.1rem;
+      color: #fff;
+      margin-bottom: 0.5rem;
+    }
+
+    .feature-card p {
+      font-size: 0.875rem;
+      color: #666;
+      line-height: 1.6;
+    }
+
+    /* How it works */
+    .how-it-works {
+      max-width: 800px;
+      margin: 0 auto;
+      padding: 4rem 2rem;
+    }
+
+    .how-it-works h2 {
+      text-align: center;
+      font-size: 2rem;
+      color: #fff;
+      margin-bottom: 3rem;
+    }
+
+    .steps {
+      display: flex;
+      flex-direction: column;
+      gap: 2rem;
+    }
+
+    .step {
+      display: flex;
+      gap: 1.5rem;
+      align-items: flex-start;
+    }
+
+    .step-number {
+      width: 40px;
+      height: 40px;
+      border-radius: 50%;
+      background: rgba(99, 102, 241, 0.15);
+      color: #818cf8;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 700;
+      font-size: 0.875rem;
+      flex-shrink: 0;
+    }
+
+    .step h3 {
+      color: #fff;
+      font-size: 1rem;
+      margin-bottom: 0.25rem;
+    }
+
+    .step p {
+      color: #666;
+      font-size: 0.875rem;
+    }
+
+    /* CTA section */
+    .cta-section {
+      text-align: center;
+      padding: 5rem 2rem;
+      max-width: 600px;
+      margin: 0 auto;
+    }
+
+    .cta-section h2 {
+      font-size: 2.5rem;
+      color: #fff;
+      margin-bottom: 1rem;
+    }
+
+    .cta-section p {
+      color: #666;
+      margin-bottom: 2rem;
+    }
+
+    /* Footer */
+    footer {
+      border-top: 1px solid #1a1a2e;
+      padding: 2rem;
+      text-align: center;
+      font-size: 0.8rem;
+      color: #444;
+      max-width: 1200px;
+      margin: 0 auto;
+    }
+
+    footer a { color: #666; text-decoration: none; }
+    footer a:hover { color: #888; }
+
+    /* Responsive */
+    @media (max-width: 768px) {
+      h1 { font-size: 2.25rem; }
+      .stats { gap: 1.5rem; }
+      .stat-number { font-size: 1.5rem; }
+      .feature-grid { grid-template-columns: 1fr; }
+      nav ul { display: none; }
+    }
+  </style>
+</head>
+<body>
+
+  <nav>
+    <a href="/" class="logo">IQ<span>Test</span></a>
+    <ul>
+      <li><a href="#features">Features</a></li>
+      <li><a href="#how-it-works">How It Works</a></li>
+      <li><a href="#pricing">Pricing</a></li>
+      <li><a href="/about">About</a></li>
+    </ul>
+    <a href="/test" class="btn btn-primary" style="padding: 0.5rem 1.25rem; font-size: 0.875rem;">Start Test</a>
+  </nav>
+
+  <section class="hero">
+    <div class="badge">Trusted by 2M+ test-takers worldwide</div>
+    <h1>Discover Your <em>True IQ</em> in 20 Minutes</h1>
+    <p>Our scientifically validated assessment measures your cognitive abilities across pattern recognition, logical reasoning, and spatial awareness. Free to take, instant results.</p>
+    <div class="cta-group">
+      <a href="/test" class="btn btn-primary">Take the Free Test →</a>
+      <a href="#how-it-works" class="btn btn-secondary">How It Works</a>
+    </div>
+  </section>
+
+  <section class="stats">
+    <div class="stat">
+      <div class="stat-number">2.4M+</div>
+      <div class="stat-label">Tests Completed</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">40</div>
+      <div class="stat-label">Questions</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">20 min</div>
+      <div class="stat-label">Average Time</div>
+    </div>
+    <div class="stat">
+      <div class="stat-number">4.8★</div>
+      <div class="stat-label">User Rating</div>
+    </div>
+  </section>
+
+  <section class="features" id="features">
+    <h2>Why Our Test Stands Out</h2>
+    <p>Built with psychometricians and validated against standardized IQ benchmarks.</p>
+    <div class="feature-grid">
+      <div class="feature-card">
+        <div class="feature-icon">🧠</div>
+        <h3>Scientifically Validated</h3>
+        <p>Our questions are developed by cognitive psychologists and calibrated against established IQ scales like WAIS and Stanford-Binet.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">⚡</div>
+        <h3>Instant Results</h3>
+        <p>Get your IQ score, percentile ranking, and cognitive breakdown immediately after completing the test. No waiting, no email required.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📊</div>
+        <h3>Detailed Breakdown</h3>
+        <p>See how you score across five cognitive domains: pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🔒</div>
+        <h3>Private & Secure</h3>
+        <p>Your results are yours. We don't sell data or require personal information to take the test.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">🌍</div>
+        <h3>Global Norming</h3>
+        <p>Compare your score against millions of test-takers worldwide. Our norming data spans 180+ countries.</p>
+      </div>
+      <div class="feature-card">
+        <div class="feature-icon">📱</div>
+        <h3>Works Everywhere</h3>
+        <p>Take the test on any device — desktop, tablet, or phone. Fully responsive with touch-friendly interactions.</p>
+      </div>
+    </div>
+  </section>
+
+  <section class="how-it-works" id="how-it-works">
+    <h2>How It Works</h2>
+    <div class="steps">
+      <div class="step">
+        <div class="step-number">1</div>
+        <div>
+          <h3>Start the test</h3>
+          <p>No signup required. Click "Start Test" and begin immediately. The timer starts when you're ready.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">2</div>
+        <div>
+          <h3>Answer 40 questions</h3>
+          <p>Work through progressively harder questions across pattern recognition, logic, and spatial reasoning. Take your time — accuracy matters more than speed.</p>
+        </div>
+      </div>
+      <div class="step">
+        <div class="step-number">3</div>
+        <div>
+          <h3>Get your results</h3>
+          <p>Instantly see your IQ score, percentile ranking, and a breakdown of your cognitive strengths. Download or share your results.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="cta-section">
+    <h2>Ready to Find Out?</h2>
+    <p>Join 2.4 million people who've discovered their true cognitive potential. Free, instant, no signup.</p>
+    <a href="/test" class="btn btn-primary">Take the Free IQ Test →</a>
+  </section>
+
+  <footer>
+    <p>&copy; 2026 IQTest. All rights reserved. &nbsp;|&nbsp; <a href="/privacy">Privacy Policy</a> &nbsp;|&nbsp; <a href="/terms">Terms of Service</a> &nbsp;|&nbsp; <a href="/about">About Our Methodology</a></p>
+  </footer>
+
+</body>
+</html>
