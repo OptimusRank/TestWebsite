@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a good IQ score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "An average IQ score is around 100, with 68% of the population scoring between 85-115. Scores above 130 are considered gifted (top 2%), while scores above 145 are highly gifted (top 0.1%). Scores between 115-129 are above average, and 70-84 are below average."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are online IQ tests?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The accuracy of online IQ tests varies significantly. High-quality tests that use scientifically validated questions and are normed against large populations can provide reasonably accurate estimates. However, they cannot replace professionally administered tests like the WAIS or Stanford-Binet for clinical or educational purposes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the Riot IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The Riot IQ test is a popular online IQ assessment that measures cognitive abilities through pattern recognition, logical reasoning, and spatial awareness questions. It provides instant results with a detailed breakdown of cognitive strengths and compares scores against a global database of test-takers."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
