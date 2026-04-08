@@ -376,6 +376,15 @@ export default function Home() {
             <Link href="/about" className="hover:text-foreground">
               About Our Methodology
             </Link>
+            <Link href="/elon-musk-iq" className="hover:text-foreground">
+              Elon Musk IQ Score
+            </Link>
+            <Link href="/donald-trump-iq" className="hover:text-foreground">
+              Donald Trump IQ Level
+            </Link>
+            <Link href="/famous-people-iq" className="hover:text-foreground">
+              Famous People IQ Scores
+            </Link>
           </div>
           <p className="text-xs text-muted-foreground">
             &copy; 2026 IQTest. All rights reserved.
