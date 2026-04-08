@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is RIOT IQ Test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "RIOT IQ Test is a scientifically validated online intelligence assessment that measures your cognitive abilities across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. The test consists of 40 questions and takes approximately 20 minutes to complete, providing instant results with detailed cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is this IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our IQ test is highly accurate, with questions developed by cognitive psychologists and calibrated against established scales like WAIS and Stanford-Binet. The test has been normed against millions of test-takers worldwide across 180+ countries, ensuring reliable and valid results that correlate strongly with traditional IQ assessments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does the test take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IQ test takes approximately 20 minutes to complete on average. It consists of 40 progressively challenging questions that assess various cognitive abilities. You can take the test at your own pace, and the timer starts only when you're ready to begin."
+                }
+              }
+            ]
+          })
+        }}
+      />
+      
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
