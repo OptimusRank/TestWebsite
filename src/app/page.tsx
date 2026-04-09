@@ -107,8 +107,76 @@ const testimonials = [
 ]
 
 export default function Home() {
+  const websiteStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Riot IQ Test",
+    "url": "https://riotiqtest.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://riotiqtest.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
+  }
+
+  const faqStructuredData = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is this IQ test?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our test is scientifically validated with questions developed by cognitive psychologists and calibrated against WAIS and Stanford-Binet scales. It provides reliable results comparable to professional assessments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the IQ test take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The test takes approximately 20 minutes on average and consists of 40 questions covering pattern recognition, logical reasoning, and spatial awareness."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is the IQ test really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our IQ test is completely free with no hidden costs. You get instant results including your IQ score, percentile ranking, and detailed cognitive breakdown without any payment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Do I need to create an account to take the test?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "No signup is required. You can start the test immediately and receive your results without creating an account or providing personal information."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What cognitive abilities does the test measure?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The test measures multiple cognitive domains including pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory to provide a comprehensive assessment of your intelligence."
+        }
+      }
+    ]
+  }
+
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteStructuredData) }}
+      />
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqStructuredData) }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
