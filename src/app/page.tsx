@@ -22,7 +22,7 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata = {
-  description: 'Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.',
+  description: 'Take our free RIOT IQ test online and get instant results. Scientifically validated questions, detailed breakdown, no signup required.',
 }
 
 const features = [
@@ -30,7 +30,7 @@ const features = [
     icon: Brain,
     title: "Scientifically Validated",
     description:
-      "Questions developed by cognitive psychologists, calibrated against WAIS and Stanford-Binet scales.",
+      "Take our free RIOT IQ test online and get instant results. Scientifically validated questions, detailed breakdown, no signup required.",
   },
   {
     icon: Zap,
