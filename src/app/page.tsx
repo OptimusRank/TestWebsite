@@ -173,9 +173,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            Take the RIOT IQ Test - the best free online IQ test trusted by millions. Our real IQ test measures your cognitive abilities across pattern recognition, logical reasoning, and spatial awareness with scientifically validated questions. Get your accurate IQ score instantly, no signup required.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
