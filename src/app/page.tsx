@@ -175,7 +175,7 @@ export default function Home() {
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
             Our scientifically validated assessment measures your cognitive
             abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            awareness. Get detailed insights including <Link href="/iq-ranges" className="text-indigo-400 hover:text-indigo-300 underline">understanding IQ score ranges</Link> to better interpret your results.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
