@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The RIOT IQ test is a scientifically validated online assessment that measures cognitive abilities across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. It consists of 40 progressively challenging questions developed by cognitive psychologists and calibrated against WAIS and Stanford-Binet scales."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this a real IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, this is a real IQ test that uses scientifically validated questions developed by cognitive psychologists. The test is calibrated against established IQ scales like WAIS and Stanford-Binet, and normed against millions of test-takers worldwide. While it provides a legitimate measure of cognitive ability, professional assessment may be needed for clinical or educational purposes."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is this free IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our free IQ test is highly accurate, with questions developed by cognitive psychologists and validated against standardized IQ benchmarks. The test is normed against data from over 2.4 million test-takers across 180+ countries, providing reliable percentile rankings and cognitive breakdowns. However, like all online tests, results should be considered estimates rather than definitive clinical assessments."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
