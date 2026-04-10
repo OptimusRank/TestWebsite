@@ -42,7 +42,7 @@ const features = [
     icon: BarChart3,
     title: "Detailed Breakdown",
     description:
-      "See how you score across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory.",
+      "See how you score across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. Compare your results with famous people like <a href=\"/elon-musk-iq\">Elon Musk's IQ</a> or <a href=\"/trump-iq\">Trump's IQ</a>.",
   },
   {
     icon: Shield,
@@ -233,8 +233,7 @@ export default function Home() {
                   <feature.icon className="size-5 text-indigo-400" />
                 </div>
                 <h3 className="text-base font-semibold">{feature.title}</h3>
-                <p className="mt-2 text-sm leading-relaxed text-muted-foreground">
-                  {feature.description}
+                <p className="mt-2 text-sm leading-relaxed text-muted-foreground" dangerouslySetInnerHTML={{ __html: feature.description }}>
                 </p>
               </CardContent>
             </Card>
