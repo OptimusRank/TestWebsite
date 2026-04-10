@@ -109,6 +109,41 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is a RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A RIOT IQ test is a scientifically validated cognitive assessment that measures intelligence quotient through pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory tasks."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is this IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our IQ test is calibrated against established standards like WAIS and Stanford-Binet scales, developed by cognitive psychologists, and validated with millions of test-takers worldwide for high accuracy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the average IQ score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The average IQ score is 100, with about 68% of people scoring between 85 and 115. Scores above 130 are considered gifted, while scores below 70 may indicate cognitive challenges."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
