@@ -109,6 +109,41 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The RIOT IQ test is a scientifically validated online assessment that measures your cognitive abilities across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. It provides instant results with your IQ score, percentile ranking, and detailed cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a good IQ score range?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Average IQ scores range from 85-115, with 100 being the population average. Scores of 116-130 are considered above average, 131-145 are gifted level, and above 145 are highly gifted. Our test is calibrated against WAIS and Stanford-Binet scales for accuracy."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is this IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our IQ test is developed by cognitive psychologists and calibrated against standardized IQ benchmarks like WAIS and Stanford-Binet scales. With over 2.4 million test-takers worldwide and norming data from 180+ countries, it provides scientifically reliable results."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
