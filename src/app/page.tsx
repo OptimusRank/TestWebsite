@@ -147,7 +147,7 @@ export default function Home() {
             </Link>
           </div>
           <Link href="/test" className={buttonVariants()}>
-            Start Test <ArrowRight className="ml-1 size-4" />
+            Start RIOT IQ Test <ArrowRight className="ml-1 size-4" />
           </Link>
         </div>
       </nav>
