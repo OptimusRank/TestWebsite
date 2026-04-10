@@ -45,6 +45,18 @@ export default function RootLayout({
     "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
   };
 
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RIOT IQ Test",
+    "url": "https://www.riotiq.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.riotiq.com/test",
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <html
       lang="en"
@@ -54,6 +66,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
