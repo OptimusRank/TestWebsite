@@ -165,9 +165,9 @@ export default function Home() {
           </Badge>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-            Free IQ Test - Discover Your{" "}
+            RIOT IQ Test - Free Online{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-              True Intelligence
+              Intelligence Assessment
             </span>{" "}
             in 20 Minutes
           </h1>
