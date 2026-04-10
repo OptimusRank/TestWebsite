@@ -173,7 +173,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
+            Our RIOT (Reasoning and Intelligence Online Test) is a scientifically validated assessment that measures your cognitive
             abilities across pattern recognition, logical reasoning, and spatial
             awareness. Free to take, instant results.
           </p>
