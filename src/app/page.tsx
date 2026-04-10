@@ -117,7 +117,7 @@ export default function Home() {
               <Brain className="size-4 text-white" />
             </div>
             <span className="text-lg font-bold tracking-tight">
-              IQ<span className="text-indigo-400">Test</span>
+              Riot<span className="text-indigo-400">IQ</span>
             </span>
           </Link>
           <div className="hidden items-center gap-8 md:flex">
@@ -363,7 +363,7 @@ export default function Home() {
               <Brain className="size-3 text-white" />
             </div>
             <span className="text-sm font-semibold">
-              IQ<span className="text-indigo-400">Test</span>
+              Riot<span className="text-indigo-400">IQ</span>
             </span>
           </div>
           <div className="flex gap-6 text-xs text-muted-foreground">
