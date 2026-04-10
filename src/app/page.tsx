@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "RIOT IQ test is a scientifically validated online assessment that measures your cognitive abilities across pattern recognition, logical reasoning, and spatial awareness. It features 40 questions developed by cognitive psychologists and calibrated against WAIS and Stanford-Binet scales, providing instant results with detailed cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is the RIOT test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The RIOT test is highly accurate, featuring questions developed by cognitive psychologists and calibrated against established IQ scales like WAIS and Stanford-Binet. It uses global norming data from millions of test-takers across 180+ countries to provide precise percentile rankings and reliable cognitive assessments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is the IQ test really free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, the IQ test is completely free with no hidden costs. You get instant results, detailed cognitive breakdown, and percentile ranking without any signup required. There are no premium upgrades or charges - it's free forever for all users."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
