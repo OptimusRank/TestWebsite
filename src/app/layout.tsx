@@ -45,6 +45,60 @@ export default function RootLayout({
     "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
   };
 
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "Free IQ Test Online",
+    "url": "https://www.example.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.example.com/search?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": [
+      {
+        "@type": "Question",
+        "name": "How accurate is this IQ test?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Our IQ test uses scientifically validated questions and standardized scoring methods, providing results that correlate well with professional IQ assessments."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "How long does the IQ test take?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "The test typically takes 15-30 minutes to complete, depending on your pace. You'll get instant results upon completion."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "Is this IQ test really free?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Yes, our basic IQ test is completely free. You can take the test and receive your score without any payment required."
+        }
+      },
+      {
+        "@type": "Question",
+        "name": "What is a good IQ score?",
+        "acceptedAnswer": {
+          "@type": "Answer",
+          "text": "Average IQ scores range from 85-115. Scores above 130 are considered gifted, while scores above 145 are considered highly gifted."
+        }
+      }
+    ]
+  };
+
   return (
     <html
       lang="en"
@@ -54,6 +108,14 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
