@@ -109,6 +109,50 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "RIOT IQ test is a scientifically validated online intelligence assessment that measures your cognitive abilities across pattern recognition, logical reasoning, and spatial awareness. Our test is calibrated against WAIS and Stanford-Binet scales and provides instant results with detailed cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are normal IQ ranges?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Normal IQ ranges are typically categorized as follows: 85-115 is considered average (68% of population), 115-130 is above average, 130+ is considered gifted, 70-85 is below average, and below 70 may indicate cognitive challenges. The average IQ score is 100 with a standard deviation of 15."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this IQ test accurate?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our IQ test is scientifically validated and developed by cognitive psychologists. The questions are calibrated against established IQ scales like WAIS and Stanford-Binet. Our norming data spans 180+ countries with over 2.4 million test-takers, ensuring accurate and reliable results."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does the IQ test take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IQ test takes approximately 20 minutes to complete on average. It consists of 40 questions that progressively increase in difficulty across pattern recognition, logical reasoning, and spatial awareness. You can take the test at your own pace without time pressure."
+                }
+              }
+            ]
+          })
+        }}
+      />
+      
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
