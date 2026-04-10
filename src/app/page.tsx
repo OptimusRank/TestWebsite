@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the different IQ score ranges and what do they mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IQ scores are typically categorized as follows: Above 130 is considered gifted, 115-129 is above average, 85-114 is average (where most people score), 70-84 is below average, and below 70 may indicate cognitive impairment. The average IQ score is 100, with 68% of people scoring between 85-115."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are online IQ tests compared to professional assessments?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our scientifically validated IQ test is calibrated against standardized assessments like WAIS and Stanford-Binet scales. While online tests can provide reliable estimates when properly designed, professional assessments conducted by psychologists remain the gold standard for clinical or educational purposes. Our test provides an accurate measure of cognitive abilities for personal insight."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the average IQ score and how do percentiles work?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The average IQ score is set at 100, with a standard deviation of 15. This means about 50% of people score below 100 and 50% above. An IQ of 115 places you in the 84th percentile (better than 84% of people), while an IQ of 130 is in the 98th percentile. Our test provides both your IQ score and percentile ranking for context."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
