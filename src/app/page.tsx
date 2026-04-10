@@ -109,6 +109,42 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "RIOT IQ test is a scientifically validated online intelligence assessment that measures your cognitive abilities across pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. It takes about 20 minutes to complete and provides instant results with detailed cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is the test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our test is highly accurate, developed by cognitive psychologists and calibrated against established IQ scales like WAIS and Stanford-Binet. The questions are scientifically validated and our norming data spans 180+ countries with over 2.4 million test-takers worldwide."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is it really free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our IQ test is completely free to take. There are no hidden costs, no signup requirements, and no subscription fees. You get instant results with detailed cognitive breakdown at no charge. We believe intelligence testing should be accessible to everyone."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
