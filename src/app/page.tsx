@@ -109,6 +109,41 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is riot iq test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Riot IQ test is a scientifically validated online intelligence assessment that measures cognitive abilities across pattern recognition, logical reasoning, and spatial awareness. It provides instant results with detailed cognitive breakdown in just 20 minutes."
+                }
+              },
+              {
+                "@type": "Question", 
+                "name": "Is riot iq test free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our IQ test is completely free to take. No signup required, no hidden fees, and you get instant results with detailed cognitive analysis at no cost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is riot iq test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our IQ test is highly accurate, developed by cognitive psychologists and calibrated against standardized scales like WAIS and Stanford-Binet. It uses scientifically validated questions and global norming data from 180+ countries."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
