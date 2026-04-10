@@ -109,6 +109,49 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the RIOT IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The RIOT IQ test is a scientifically validated cognitive assessment that measures your intelligence quotient across multiple domains including pattern recognition, logical reasoning, spatial awareness, verbal ability, and working memory. Questions are developed by cognitive psychologists and calibrated against established scales like WAIS and Stanford-Binet."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this IQ test free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our IQ test is completely free to take. There are no hidden fees, no signup required, and no subscription charges. You can take the full 40-question assessment and receive your detailed results instantly at no cost."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate is the RIOT test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The RIOT test is highly accurate, with questions developed by cognitive psychologists and calibrated against established IQ scales like WAIS and Stanford-Binet. Our norming data spans 180+ countries with over 2.4 million test-takers, ensuring reliable and scientifically valid results."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a good IQ score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IQ scores are standardized with an average of 100. Scores between 85-115 are considered average (68% of population), 115-130 is above average (14% of population), 130+ is considered gifted (2% of population). Our test provides both your IQ score and percentile ranking compared to the global population."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
