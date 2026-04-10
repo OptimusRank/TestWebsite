@@ -109,6 +109,50 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What are the different IQ ranges and what do they mean?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "IQ ranges are typically classified as: Below 70 (Extremely Low), 70-84 (Below Average), 85-114 (Average), 115-129 (Above Average), 130-144 (Gifted), and 145+ (Highly Gifted). Most people (about 68%) fall within the average range of 85-115."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What are some famous people's IQ scores?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "While exact IQ scores of famous individuals are often estimated, some notable examples include: Albert Einstein (estimated 160), Stephen Hawking (estimated 160), Leonardo da Vinci (estimated 180), and Marie Curie (estimated 185). It's important to note these are estimates as many historical figures never took standardized IQ tests."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is the average IQ score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The average IQ score is standardized to 100, with a standard deviation of 15. This means that approximately 68% of the population scores between 85 and 115, while 95% score between 70 and 130. The test is designed so that 100 represents the median score of the general population."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are online IQ tests?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The accuracy of online IQ tests varies significantly. Professional, scientifically validated online tests that are calibrated against established standards like WAIS or Stanford-Binet can provide reasonably accurate estimates. However, many free online tests lack proper validation and may not provide reliable results."
+                }
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
