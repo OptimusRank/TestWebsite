@@ -109,6 +109,41 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "What is the best IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The best IQ tests are scientifically validated assessments calibrated against standardized scales like WAIS and Stanford-Binet. Our free online IQ test uses questions developed by cognitive psychologists and provides instant, detailed results with your score, percentile ranking, and cognitive breakdown."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How accurate are online IQ tests?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Online IQ tests can be highly accurate when they are scientifically validated and properly normed. Our test has been calibrated against established IQ scales and validated with millions of test-takers worldwide, providing reliable results comparable to traditional assessments."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "What is a good IQ score?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "A good IQ score is typically considered to be above 100, which is the average. Scores of 110-119 are above average, 120-129 are superior, and 130+ are considered gifted. Our test provides your exact score along with percentile ranking to show how you compare to the global population."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
