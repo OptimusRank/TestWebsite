@@ -167,9 +167,8 @@ export default function Home() {
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
             Free IQ Test - Discover Your{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-              True Intelligence
-            </span>{" "}
-            in 20 Minutes
+              True Intelligence Online
+            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
