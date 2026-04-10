@@ -109,6 +109,73 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      {/* JSON-LD Structured Data */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify([
+            {
+              "@context": "https://schema.org",
+              "@type": "WebSite",
+              "name": "IQTest - Free Online IQ Test",
+              "url": "https://yoursite.com",
+              "potentialAction": {
+                "@type": "SearchAction",
+                "target": "https://yoursite.com/search?q={search_term_string}",
+                "query-input": "required name=search_term_string"
+              },
+              "sameAs": []
+            },
+            {
+              "@context": "https://schema.org",
+              "@type": "FAQPage",
+              "mainEntity": [
+                {
+                  "@type": "Question",
+                  "name": "How accurate is this IQ test?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Our test is scientifically validated and calibrated against standardized IQ benchmarks like WAIS and Stanford-Binet scales, with questions developed by cognitive psychologists."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "How long does the IQ test take?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "The test typically takes about 20 minutes to complete and consists of 40 progressively challenging questions across different cognitive areas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Is the IQ test really free?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Yes, our IQ test is completely free with no hidden costs. You get instant results including your IQ score, percentile ranking, and cognitive breakdown without any payment required."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "What does my IQ score mean?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Your IQ score represents your cognitive abilities compared to the general population. Scores are normalized with 100 being average, and you'll receive a detailed breakdown of your performance across different cognitive areas."
+                  }
+                },
+                {
+                  "@type": "Question",
+                  "name": "Do I need to sign up to take the test?",
+                  "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "No signup is required. You can start the test immediately and receive your results instantly without providing any personal information."
+                  }
+                }
+              ]
+            }
+          ])
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
