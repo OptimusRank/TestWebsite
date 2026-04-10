@@ -109,6 +109,12 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({"@context":"https://schema.org","@type":"WebSite","name":"RIOT IQ Test","url":"https://www.riotiq.com","description":"Free online RIOT IQ test - Reasoning and Intelligence Online Test with instant results","potentialAction":{"@type":"SearchAction","target":{"@type":"EntryPoint","urlTemplate":"https://www.riotiq.com/search?q={search_term_string}"},"query-input":"required name=search_term_string"}})
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
