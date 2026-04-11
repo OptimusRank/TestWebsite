@@ -125,25 +125,25 @@ export default function Home() {
               href="#features"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Features
+              Best IQ Test
             </Link>
             <Link
               href="#how-it-works"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              How It Works
+              Free IQ Test Results
             </Link>
             <Link
               href="#testimonials"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Reviews
+              IQ Score Ranges
             </Link>
             <Link
               href="/about"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              About
+              Real IQ Test Online
             </Link>
           </div>
           <Link href="/test" className={buttonVariants()}>
@@ -374,7 +374,7 @@ export default function Home() {
               Terms of Service
             </Link>
             <Link href="/about" className="hover:text-foreground">
-              About Our Methodology
+              Real IQ Test Online
             </Link>
           </div>
           <p className="text-xs text-muted-foreground">
