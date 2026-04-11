@@ -29,6 +29,7 @@ export const metadata: Metadata = {
       "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
     type: "website",
   },
+  viewport: "width=device-width, initial-scale=1",
 };
 
 export default function RootLayout({
