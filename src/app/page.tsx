@@ -64,6 +64,39 @@ const features = [
   },
 ]
 
+const iqRanges = [
+  { range: "145+", classification: "Genius", percentage: "0.1%" },
+  { range: "130-144", classification: "Highly Gifted", percentage: "2%" },
+  { range: "115-129", classification: "Above Average", percentage: "14%" },
+  { range: "85-114", classification: "Average", percentage: "68%" },
+  { range: "70-84", classification: "Below Average", percentage: "14%" },
+  { range: "55-69", classification: "Mild Impairment", percentage: "2%" },
+  { range: "Below 55", classification: "Severe Impairment", percentage: "0.1%" },
+]
+
+const countryAverages = [
+  { country: "Singapore", averageIQ: 108, flag: "🇸🇬" },
+  { country: "Hong Kong", averageIQ: 106, flag: "🇭🇰" },
+  { country: "South Korea", averageIQ: 106, flag: "🇰🇷" },
+  { country: "Japan", averageIQ: 105, flag: "🇯🇵" },
+  { country: "China", averageIQ: 104, flag: "🇨🇳" },
+  { country: "USA", averageIQ: 98, flag: "🇺🇸" },
+  { country: "Germany", averageIQ: 99, flag: "🇩🇪" },
+  { country: "United Kingdom", averageIQ: 100, flag: "🇬🇧" },
+  { country: "India", averageIQ: 82, flag: "🇮🇳" },
+  { country: "Brazil", averageIQ: 87, flag: "🇧🇷" },
+]
+
+const ageGroups = [
+  { ageGroup: "16-17 years", averageIQ: 108, description: "Peak fluid intelligence development" },
+  { ageGroup: "18-19 years", averageIQ: 105, description: "Transition to adult cognitive patterns" },
+  { ageGroup: "20-34 years", averageIQ: 100, description: "Optimal cognitive performance period" },
+  { ageGroup: "35-44 years", averageIQ: 101, description: "Experience compensates for processing speed" },
+  { ageGroup: "45-54 years", averageIQ: 106, description: "Crystallized intelligence peaks" },
+  { ageGroup: "55-64 years", averageIQ: 109, description: "Wisdom and accumulated knowledge" },
+  { ageGroup: "65+ years", averageIQ: 114, description: "Selective optimization with compensation" },
+]
+
 const steps = [
   {
     number: "01",
@@ -239,6 +272,160 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      {/* IQ Score Ranges and Demographics */}
+      <section id="iq-ranges" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            IQ Intelligence Guide
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            IQ Score Ranges and Demographics
+          </h2>
+          <p className="mx-auto mt-4 max-w-3xl text-muted-foreground">
+            Understanding IQ scores across different populations, age groups, and countries. 
+            Learn where you stand on the intelligence scale.
+          </p>
+        </div>
+
+        {/* IQ Scale and Ranges */}
+        <div className="mt-16">
+          <h3 className="mb-8 text-center text-2xl font-semibold">IQ Scale: Score Ranges Explained</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-3">
+            {iqRanges.map((range) => (
+              <Card key={range.range} className="border-border/50 bg-card/50">
+                <CardContent className="pt-6">
+                  <div className="text-center">
+                    <div className="mb-2 text-2xl font-bold text-indigo-400">{range.range}</div>
+                    <div className="mb-1 text-lg font-semibold">{range.classification}</div>
+                    <div className="text-sm text-muted-foreground">
+                      {range.percentage} of population
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            The standard IQ scale is normalized with an average of 100 and standard deviation of 15
+          </div>
+        </div>
+
+        {/* Average IQ by Country */}
+        <div className="mt-20">
+          <h3 className="mb-8 text-center text-2xl font-semibold">Average IQ by Country</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-5">
+            {countryAverages.map((country) => (
+              <Card key={country.country} className="border-border/50 bg-card/50">
+                <CardContent className="pt-6 text-center">
+                  <div className="mb-2 text-3xl">{country.flag}</div>
+                  <div className="mb-1 text-sm font-semibold">{country.country}</div>
+                  <div className="text-xl font-bold text-indigo-400">
+                    {country.averageIQ}
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-8 grid gap-6 sm:grid-cols-2">
+            <Card className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <h4 className="mb-3 font-semibold">Average IQ in USA</h4>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  The United States has an average IQ of 98, slightly below the global standard of 100. 
+                  This reflects the diverse population and educational systems across different states. 
+                  Individual scores vary significantly, with many Americans scoring well above average.
+                </p>
+              </CardContent>
+            </Card>
+            <Card className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <h4 className="mb-3 font-semibold">Average IQ in India</h4>
+                <p className="text-sm leading-relaxed text-muted-foreground">
+                  India's average IQ is measured at 82, though this varies greatly across regions and 
+                  socioeconomic factors. Educational access, nutrition, and urban vs rural differences 
+                  significantly impact these measurements. Many individual Indians score exceptionally high.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+
+        {/* IQ by Age Group */}
+        <div className="mt-20">
+          <h3 className="mb-8 text-center text-2xl font-semibold">Average IQ by Age Group</h3>
+          <div className="grid gap-4 lg:grid-cols-2">
+            {ageGroups.map((group) => (
+              <Card key={group.ageGroup} className="border-border/50 bg-card/50">
+                <CardContent className="pt-6">
+                  <div className="flex items-center justify-between">
+                    <div>
+                      <div className="font-semibold">{group.ageGroup}</div>
+                      <div className="text-sm text-muted-foreground">{group.description}</div>
+                    </div>
+                    <div className="text-2xl font-bold text-indigo-400">
+                      {group.averageIQ}
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+            ))}
+          </div>
+          <div className="mt-6 text-center text-sm text-muted-foreground">
+            Age-adjusted scores account for normal cognitive development and decline patterns
+          </div>
+        </div>
+
+        {/* Additional Information */}
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <Card className="border-border/50 bg-card/50">
+            <CardContent className="pt-6">
+              <h4 className="mb-4 text-lg font-semibold">Understanding Your IQ Score</h4>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>IQ scores follow a normal distribution curve</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>68% of people score between 85-115</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>95% of people score between 70-130</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>Only 2% score above 130 (highly gifted)</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
+          <Card className="border-border/50 bg-card/50">
+            <CardContent className="pt-6">
+              <h4 className="mb-4 text-lg font-semibold">Factors Affecting IQ Scores</h4>
+              <div className="space-y-3 text-sm text-muted-foreground">
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>Education quality and access</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>Socioeconomic background</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>Cultural and linguistic factors</span>
+                </div>
+                <div className="flex items-start gap-2">
+                  <CheckCircle className="mt-0.5 size-4 shrink-0 text-emerald-500" />
+                  <span>Test-taking experience and familiarity</span>
+                </div>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
 
