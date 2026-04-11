@@ -30,7 +30,7 @@ const features = [
     icon: Brain,
     title: "Scientifically Validated",
     description:
-      "Questions developed by cognitive psychologists, calibrated against WAIS and Stanford-Binet scales.",
+      "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.",
   },
   {
     icon: Zap,
