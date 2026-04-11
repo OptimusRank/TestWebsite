@@ -106,6 +106,30 @@ const testimonials = [
   },
 ]
 
+const celebrityIQs = [
+  {
+    name: "Elon Musk",
+    estimatedIQ: "155-165",
+    description: "Known for his innovative work with Tesla, SpaceX, and Neuralink, Elon Musk's IQ is estimated to be exceptionally high based on his achievements in engineering, physics, and business strategy.",
+    achievements: ["Founded multiple billion-dollar companies", "Advanced rocket technology", "Electric vehicle innovation"],
+    category: "Genius Level"
+  },
+  {
+    name: "Donald Trump",
+    estimatedIQ: "120-130",
+    description: "Former U.S. President and business mogul, Trump's IQ has been subject to much speculation. While he's claimed higher scores, experts estimate his IQ in the above-average range based on his business and political achievements.",
+    achievements: ["Real estate empire", "TV personality", "U.S. President"],
+    category: "Above Average"
+  },
+  {
+    name: "Albert Einstein",
+    estimatedIQ: "160-180",
+    description: "The legendary physicist never took a formal IQ test, but his revolutionary theories in physics and mathematics suggest an IQ in the genius range. His work fundamentally changed our understanding of space, time, and energy.",
+    achievements: ["Theory of Relativity", "Nobel Prize in Physics", "E=mc² equation"],
+    category: "Exceptional Genius"
+  }
+]
+
 export default function Home() {
   return (
     <>
@@ -320,6 +344,79 @@ export default function Home() {
               </CardContent>
             </Card>
           ))}
+        </div>
+      </section>
+
+      <Separator className="mx-auto max-w-6xl" />
+
+      {/* Compare Your IQ to Famous People */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            Celebrity IQ Comparisons
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Compare Your IQ to Famous People
+          </h2>
+          <p className="mx-auto mt-4 max-w-2xl text-muted-foreground">
+            Ever wondered how your intelligence compares to famous personalities? Here are estimated IQ scores of well-known figures and what different IQ ranges actually mean.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-3">
+          {celebrityIQs.map((celebrity) => (
+            <Card key={celebrity.name} className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <div className="mb-4 flex items-center justify-between">
+                  <h3 className="text-xl font-bold">{celebrity.name}</h3>
+                  <Badge variant="secondary" className="font-mono">
+                    <Brain className="mr-1 size-3" />
+                    IQ {celebrity.estimatedIQ}
+                  </Badge>
+                </div>
+                <Badge variant="outline" className="mb-4 text-xs">
+                  {celebrity.category}
+                </Badge>
+                <p className="text-sm leading-relaxed text-muted-foreground mb-4">
+                  {celebrity.description}
+                </p>
+                <div>
+                  <h4 className="text-sm font-semibold mb-2">Key Achievements:</h4>
+                  <ul className="text-xs text-muted-foreground space-y-1">
+                    {celebrity.achievements.map((achievement, index) => (
+                      <li key={index} className="flex items-center gap-2">
+                        <CheckCircle className="size-3 text-emerald-500 shrink-0" />
+                        {achievement}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+
+        <div className="mt-16 rounded-2xl bg-muted/30 p-8">
+          <h3 className="text-xl font-bold mb-6 text-center">Understanding IQ Score Ranges</h3>
+          <div className="grid gap-4 sm:grid-cols-2 lg:grid-cols-4">
+            {[
+              { range: "130+", label: "Gifted/Genius", percentage: "2%", description: "Exceptional cognitive abilities" },
+              { range: "115-129", label: "Above Average", percentage: "14%", description: "Higher than most people" },
+              { range: "85-114", label: "Average", percentage: "68%", description: "Most of the population" },
+              { range: "70-84", label: "Below Average", percentage: "16%", description: "Lower cognitive function" },
+            ].map((range) => (
+              <div key={range.range} className="text-center p-4 rounded-lg bg-background/50">
+                <div className="text-lg font-bold text-indigo-400">{range.range}</div>
+                <div className="text-sm font-medium">{range.label}</div>
+                <div className="text-xs text-muted-foreground mt-1">{range.percentage} of population</div>
+                <div className="text-xs text-muted-foreground mt-2">{range.description}</div>
+              </div>
+            ))}
+          </div>
+          <p className="text-sm text-muted-foreground text-center mt-6">
+            <strong>Important Note:</strong> Celebrity IQ scores are estimates based on achievements and available information. 
+            Actual IQ can only be determined through standardized testing. Take our test to discover your real cognitive abilities!
+          </p>
         </div>
       </section>
 
