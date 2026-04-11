@@ -22,7 +22,8 @@ import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
 export const metadata = {
-  description: 'Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.',
+  title: 'IQ Test - Measure Your Intelligence | Free Online Assessment',
+  description: 'Take our free IQ test and discover your cognitive abilities in 20 minutes. Scientifically validated questions with instant results and detailed breakdown.',
 }
 
 const features = [
