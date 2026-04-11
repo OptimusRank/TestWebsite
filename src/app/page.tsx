@@ -109,6 +109,69 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@graph": [
+              {
+                "@type": "WebSite",
+                "@id": "https://iqtest.com/#website",
+                "url": "https://iqtest.com/",
+                "name": "Free IQ Test - Discover Your True Intelligence",
+                "description": "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.",
+                "potentialAction": {
+                  "@type": "SearchAction",
+                  "target": {
+                    "@type": "EntryPoint",
+                    "urlTemplate": "https://iqtest.com/test"
+                  },
+                  "query-input": "required name=search_term_string"
+                }
+              },
+              {
+                "@type": "FAQPage",
+                "mainEntity": [
+                  {
+                    "@type": "Question",
+                    "name": "How accurate is this IQ test?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Our IQ test is scientifically validated with questions developed by cognitive psychologists and calibrated against WAIS and Stanford-Binet scales. It provides reliable cognitive assessment across pattern recognition, logical reasoning, and spatial awareness."
+                    }
+                  },
+                  {
+                    "@type": "Question", 
+                    "name": "How long does the IQ test take?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "The IQ test takes approximately 20 minutes to complete. It consists of 40 questions of progressively increasing difficulty across multiple cognitive domains."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Is the IQ test really free?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "Yes, our IQ test is completely free with no hidden costs. You get instant results, percentile ranking, and detailed cognitive breakdown without any payment or subscription required."
+                    }
+                  },
+                  {
+                    "@type": "Question",
+                    "name": "Do I need to create an account to take the IQ test?",
+                    "acceptedAnswer": {
+                      "@type": "Answer",
+                      "text": "No signup or account creation is required. You can start the IQ test immediately and receive your results instantly while maintaining complete privacy."
+                    }
+                  }
+                ]
+              }
+            ]
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
