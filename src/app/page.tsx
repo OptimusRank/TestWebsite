@@ -173,7 +173,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
+            Our scientifically validated IQ test measures your cognitive
             abilities across pattern recognition, logical reasoning, and spatial
             awareness. Free to take, instant results.
           </p>
