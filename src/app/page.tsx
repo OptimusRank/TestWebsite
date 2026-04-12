@@ -180,7 +180,7 @@ export default function Home() {
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/test" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
-              Take the Free Test
+              Take Free RIOT IQ Test
               <ChevronRight className="ml-1 size-4" />
             </Link>
             <Link href="#how-it-works" className={buttonVariants({ size: "lg", variant: "outline", className: "h-12 px-8 text-base" })}>
