@@ -26,7 +26,7 @@ export const metadata: Metadata = {
   openGraph: {
     title: "Free IQ Test Online | Certified Intelligence Assessment",
     description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+      "Free RIOT IQ Test - Get instant IQ score, compare with Elon Musk IQ & Trump IQ. Includes IQ ranges, scale, and detailed breakdown.",
     type: "website",
   },
 };
