@@ -39,10 +39,33 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    "name": "RIOT IQ",
+    "url": "https://www.riotiq.com/",
+    "description": "Free online RIOT IQ test..."
+  };
+
+  const webSiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RIOT IQ",
+    "url": "https://www.riotiq.com/",
+    "siteNavigationElement": [
+      {
+        "@type": "SiteNavigationElement",
+        "name": "Home",
+        "url": "https://www.riotiq.com/"
+      },
+      {
+        "@type": "SiteNavigationElement",
+        "name": "IQ Test",
+        "url": "https://www.riotiq.com/test"
+      }
+    ],
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.riotiq.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
@@ -54,6 +77,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(webSiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
