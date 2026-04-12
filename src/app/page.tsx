@@ -242,6 +242,107 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Understanding IQ Scores and Ranges */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            IQ Guide
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Understanding IQ Scores and Ranges
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Learn about IQ scale ranges, global averages, and famous personalities' estimated scores.
+          </p>
+        </div>
+
+        <div className="mt-16 space-y-12">
+          <div className="grid gap-8 lg:grid-cols-2">
+            <Card className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-semibold mb-4">IQ Ranges and Classifications</h3>
+                <div className="space-y-3 text-sm">
+                  <div className="flex justify-between items-center p-2 bg-muted/50 rounded">
+                    <span>Above 145</span>
+                    <span className="text-green-400">Genius/Near Genius</span>
+                  </div>
+                  <div className="flex justify-between items-center p-2 bg-muted/50 rounded">
+                    <span>130-145</span>
+                    <span className="text-blue-400">Highly Gifted</span>
+                  </div>
+                  <div className="flex justify-between items-center p-2 bg-muted/50 rounded">
+                    <span>115-130</span>
+                    <span className="text-indigo-400">Above Average</span>
+                  </div>
+                  <div className="flex justify-between items-center p-2 bg-muted/50 rounded">
+                    <span>85-115</span>
+                    <span className="text-gray-400">Average</span>
+                  </div>
+                  <div className="flex justify-between items-center p-2 bg-muted/50 rounded">
+                    <span>70-85</span>
+                    <span className="text-orange-400">Below Average</span>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <h3 className="text-xl font-semibold mb-4">Average IQ by Country</h3>
+                <div className="space-y-4 text-sm">
+                  <div>
+                    <h4 className="font-medium text-indigo-400 mb-2">Average IQ in USA</h4>
+                    <p className="text-muted-foreground">
+                      The average IQ in the USA is approximately 98, which falls within the global average range. Regional variations exist, with urban areas often showing slightly higher averages.
+                    </p>
+                  </div>
+                  <div>
+                    <h4 className="font-medium text-indigo-400 mb-2">Average IQ in India</h4>
+                    <p className="text-muted-foreground">
+                      The average IQ in India is estimated at around 82. However, this varies significantly by region, education access, and socioeconomic factors. India's diverse population shows wide variations in cognitive performance.
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <Card className="border-border/50 bg-card/50">
+            <CardContent className="pt-6">
+              <h3 className="text-xl font-semibold mb-6">Famous Personalities' Estimated IQs</h3>
+              <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
+                <div className="text-center p-4 bg-muted/30 rounded-lg">
+                  <div className="text-2xl font-bold text-indigo-400 mb-2">155-160</div>
+                  <h4 className="font-medium mb-2">Elon Musk IQ</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Estimated based on his achievements in technology, engineering, and business innovation.
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-muted/30 rounded-lg">
+                  <div className="text-2xl font-bold text-indigo-400 mb-2">120-130</div>
+                  <h4 className="font-medium mb-2">Trump IQ</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Estimated range based on educational background and business acumen, though no official test results exist.
+                  </p>
+                </div>
+                <div className="text-center p-4 bg-muted/30 rounded-lg">
+                  <div className="text-2xl font-bold text-indigo-400 mb-2">160+</div>
+                  <h4 className="font-medium mb-2">Albert Einstein</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Theoretical estimate for the renowned physicist, though he never took a formal IQ test.
+                  </p>
+                </div>
+              </div>
+              <div className="mt-6 p-4 bg-amber-500/10 border border-amber-500/20 rounded-lg">
+                <p className="text-sm text-amber-200">
+                  <strong>Note:</strong> Celebrity IQ estimates are speculative and not based on official test results. They should be viewed as approximations based on achievements and education.
+                </p>
+              </div>
+            </CardContent>
+          </Card>
+        </div>
+      </section>
+
       <Separator className="mx-auto max-w-6xl" />
 
       {/* How It Works */}
