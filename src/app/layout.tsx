@@ -36,13 +36,28 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RiotIQ - Free IQ Test Online",
+    "url": "https://www.example.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": {
+        "@type": "EntryPoint",
+        "urlTemplate": "https://www.example.com?q={search_term_string}"
+      },
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
+    "name": "RiotIQ",
     "url": "https://www.example.com",
     "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    "description": "RiotIQ is the official provider of professional online IQ testing services, offering scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
   };
 
   return (
@@ -51,6 +66,10 @@ export default function RootLayout({
       className={`${geistSans.variable} ${geistMono.variable} h-full antialiased dark`}
     >
       <head>
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
+        />
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
