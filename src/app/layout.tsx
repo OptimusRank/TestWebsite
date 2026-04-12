@@ -23,6 +23,9 @@ export const metadata: Metadata = {
     "online IQ test",
     "cognitive assessment",
   ],
+  alternates: {
+    canonical: "https://www.riotiq.com/",
+  },
   openGraph: {
     title: "Free IQ Test Online | Certified Intelligence Assessment",
     description:
