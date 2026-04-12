@@ -244,6 +244,89 @@ export default function Home() {
 
       <Separator className="mx-auto max-w-6xl" />
 
+      {/* IQ Score Ranges and Scales */}
+      <section className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            IQ Insights
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Understanding IQ Score Ranges and Scales
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Learn about IQ levels, score ranges, and how intelligence is measured across different populations.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 lg:grid-cols-2">
+          <div>
+            <h3 className="text-xl font-semibold mb-4">IQ Score Range and Levels</h3>
+            <div className="space-y-4">
+              <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Average IQ</span>
+                  <Badge variant="secondary">85-115</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">The majority of the population (68%) falls within this range on the IQ scale.</p>
+              </div>
+              <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Above Average</span>
+                  <Badge variant="secondary">115-129</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">Represents approximately 14% of the population with superior cognitive abilities.</p>
+              </div>
+              <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Genius Level</span>
+                  <Badge variant="secondary">130+</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">Only about 2% of people score at this exceptional level on IQ ranges.</p>
+              </div>
+            </div>
+          </div>
+
+          <div>
+            <h3 className="text-xl font-semibold mb-4">Global IQ Comparisons</h3>
+            <div className="space-y-4">
+              <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Average IQ in USA</span>
+                  <Badge variant="outline">98-100</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">The United States maintains a consistent average within global norms across all IQ levels.</p>
+              </div>
+              <div className="p-4 rounded-lg bg-muted/30 border border-border/50">
+                <div className="flex justify-between items-center mb-2">
+                  <span className="font-medium">Average IQ in India</span>
+                  <Badge variant="outline">82-85</Badge>
+                </div>
+                <p className="text-sm text-muted-foreground">India shows growing cognitive performance with significant regional variations on the IQ scale.</p>
+              </div>
+            </div>
+
+            <div className="mt-6">
+              <h4 className="text-lg font-medium mb-4">Celebrity IQ Examples</h4>
+              <div className="space-y-3">
+                <div className="flex justify-between items-center p-3 rounded-lg bg-card/50 border border-border/30">
+                  <span className="text-sm">Elon Musk IQ</span>
+                  <Badge variant="outline">~155</Badge>
+                </div>
+                <div className="flex justify-between items-center p-3 rounded-lg bg-card/50 border border-border/30">
+                  <span className="text-sm">Donald Trump IQ</span>
+                  <Badge variant="outline">~120</Badge>
+                </div>
+                <p className="text-xs text-muted-foreground mt-2">
+                  *Celebrity IQ scores are estimates based on public information and achievements.
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <Separator className="mx-auto max-w-6xl" />
+
       {/* How It Works */}
       <section
         id="how-it-works"
