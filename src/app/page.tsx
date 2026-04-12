@@ -173,9 +173,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            Take our free RIOT IQ test - a comprehensive Reasoning and Intelligence Online Test that measures your IQ score across pattern recognition, logical reasoning, and spatial awareness. Compare your results with average IQ ranges, celebrity IQ scores like Elon Musk IQ and Trump IQ. Free to take with instant results.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
