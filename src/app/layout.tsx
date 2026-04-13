@@ -17,11 +17,16 @@ export const metadata: Metadata = {
   description:
     "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
   keywords: [
-    "IQ test",
-    "intelligence test",
-    "free IQ test",
-    "online IQ test",
-    "cognitive assessment",
+    "riot iq test",
+    "riot iq",
+    "free iq test",
+    "elon musk iq",
+    "trump iq",
+    "iq ranges",
+    "iq scale",
+    "average iq",
+    "best iq test",
+    "reasoning and intelligence online test",
   ],
   openGraph: {
     title: "Free IQ Test Online | Certified Intelligence Assessment",
