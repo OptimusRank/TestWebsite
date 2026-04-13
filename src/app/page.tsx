@@ -210,6 +210,12 @@ export default function Home() {
         </div>
       </section>
 
+      {/* Celebrity IQ Section */}
+      <section className="mx-auto max-w-6xl px-4 py-16 sm:px-6">
+        <h2 className="text-2xl font-bold text-center mb-8">Compare Your IQ to Famous People</h2>
+        <p className="text-center text-muted-foreground mb-8">Curious about celebrity intelligence? Take our RIOT IQ test and see how your score compares to estimates for Elon Musk IQ, Donald Trump IQ, and other notable figures. Remember, these are estimates - take the real test to know your true intelligence level.</p>
+      </section>
+
       {/* Features */}
       <section id="features" className="mx-auto max-w-6xl px-4 py-24 sm:px-6">
         <div className="text-center">
