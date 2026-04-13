@@ -24,10 +24,17 @@ export const metadata: Metadata = {
     "cognitive assessment",
   ],
   openGraph: {
-    title: "Free IQ Test Online | Certified Intelligence Assessment",
-    description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+    title: "RIOT IQ Test - Free Online Intelligence Assessment",
+    description: "Take the RIOT IQ Test free - measure your intelligence with our scientifically validated assessment. Get instant results with IQ score ranges and detailed analysis.",
     type: "website",
+    url: "https://www.riotiq.com",
+    siteName: "RIOT IQ Test",
+    images: [{
+      url: "https://www.riotiq.com/og-image.jpg",
+      width: 1200,
+      height: 630,
+      alt: "RIOT IQ Test - Free Online Intelligence Assessment"
+    }]
   },
 };
 
