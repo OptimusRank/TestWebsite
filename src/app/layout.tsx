@@ -36,13 +36,30 @@ export default function RootLayout({
 }: Readonly<{
   children: React.ReactNode;
 }>) {
-  const organizationSchema = {
+  const structuredData = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    "name": "RIOT IQ Test",
+    "alternateName": "Reasoning and Intelligence Online Test",
+    "url": "https://www.riotiq.com",
+    "logo": "https://www.riotiq.com/logo.png",
+    "description": "Free online IQ test providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis.",
+    "sameAs": [
+      "https://www.riotiq.com"
+    ],
+    "serviceArea": "Worldwide",
+    "hasOfferCatalog": {
+      "@type": "OfferCatalog",
+      "name": "IQ Testing Services",
+      "itemListElement": [{
+        "@type": "Offer",
+        "itemOffered": {
+          "@type": "Service",
+          "name": "RIOT IQ Test",
+          "description": "Free online intelligence quotient assessment"
+        }
+      }]
+    }
   };
 
   return (
@@ -53,7 +70,7 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
