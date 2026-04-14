@@ -1,0 +1,8 @@
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl-delay to be respectful of server resources
+Crawl-delay: 1
