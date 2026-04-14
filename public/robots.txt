@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of all main pages
+Allow: /iq-ranges
+Allow: /famous-people-iq
+Allow: /average-iq
+Allow: /best-iq-test
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
