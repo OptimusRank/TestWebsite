@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block test and development paths if they exist
+Disallow: /test/
+Disallow: /admin/
+Disallow: /api/
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl delay (optional, helps with server load)
+Crawl-delay: 1
