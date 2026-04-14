@@ -1,0 +1,12 @@
+User-agent: *
+Allow: /
+
+# Important pages for IQ test queries
+Allow: /assessments/free-iq-test
+Allow: /sample
+
+# XML Sitemap
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
