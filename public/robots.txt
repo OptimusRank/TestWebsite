@@ -1,0 +1,32 @@
+# Robots.txt for RiotIQ - Free Online IQ Test
+# Allow all search engines to crawl the site
+
+User-agent: *
+Allow: /
+
+# Block crawling of admin and system areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/
+Disallow: /private/
+
+# Block crawling of test content and previews
+Disallow: /*?utm_source=*
+Disallow: /*?utm_medium=*
+Disallow: /*?utm_campaign=*
+Disallow: /test-preview/
+Disallow: /staging/
+
+# Allow specific crawlers full access
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://optimusrank-testwebsite-3b249b1.vercel.app/sitemap.xml
+
+# Crawl-delay for general bots (not Google/Bing)
+User-agent: *
+Crawl-delay: 1
