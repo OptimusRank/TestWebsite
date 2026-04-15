@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Block access to sensitive areas
+Disallow: /api/
+Disallow: /admin/
+Disallow: /_next/static/
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
