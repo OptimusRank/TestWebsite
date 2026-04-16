@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /admin/
+Disallow: /test/results
+Disallow: /*?utm_*
+
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Allow crawling of main test page but prevent indexing of user results
+User-agent: Googlebot
+Allow: /test
+Disallow: /test/results/*
