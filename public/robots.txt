@@ -1,0 +1,14 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Important pages for IQ test content
+Allow: /test
+Allow: /articles
+Allow: /assessments
+
+# Block admin or sensitive areas if they exist
+Disallow: /admin/
+Disallow: /api/
+Disallow: /*.json$
