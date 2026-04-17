@@ -1,0 +1,18 @@
+User-agent: *
+Allow: /
+
+# Block any potential admin or sensitive areas
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+
+# Allow all important IQ test related pages
+Allow: /test/
+Allow: /results/
+Allow: /articles/
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl-delay to be respectful to server resources
+Crawl-delay: 1
