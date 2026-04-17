@@ -1,0 +1,16 @@
+User-agent: *
+Allow: /
+
+# Block admin areas if they exist
+Disallow: /admin/
+Disallow: /api/
+
+# Allow common crawlers
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
