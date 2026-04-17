@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Allow all crawlers to access the site
+Allow: /test
+Allow: /about
+Allow: /privacy
+Allow: /contact
+Allow: /iq-guide
+Allow: /faq
+
+# Block sensitive areas if they exist
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.optimusrank.com/sitemap.xml
