@@ -1,0 +1,19 @@
+User-agent: *
+Allow: /
+
+# Allow all search engines to crawl the IQ test
+Allow: /test
+Allow: /results
+Allow: /about
+Allow: /privacy
+Allow: /terms
+
+# Block admin and private areas
+Disallow: /admin/
+Disallow: /api/private/
+
+# Sitemap location
+Sitemap: https://iqtest.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
