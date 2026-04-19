@@ -1,0 +1,13 @@
+User-agent: *
+Allow: /
+
+# Important pages
+Allow: /test
+Allow: /assessments/
+Allow: /articles/
+
+# Sitemaps
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl-delay for respectful crawling
+Crawl-delay: 1
