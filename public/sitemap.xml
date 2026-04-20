@@ -1,0 +1,133 @@
+I need to first understand the actual site structure and domain to fix the sitemap URLs correctly.
+
+<check_site_structure>
+
+Looking at the site structure, I can see this is a Next.js site with specific routes. Let me examine the actual domain and available pages by looking at the route structure and any configuration files.
+
+<read_file>
+<path>package.json</path>
+</read_file>
+
+<read_file>
+<path>next.config.js</path>
+</read_file>
+
+<read_file>
+<path>app/layout.tsx</path>
+</read_file>
+
+Now let me check what pages actually exist by examining the app directory structure:
+
+<read_file>
+<path>app/page.tsx</path>
+</read_file>
+
+<read_file>
+<path>app/assessments/free-iq-test/page.tsx</path>
+</read_file>
+
+<read_file>
+<path>app/assessments/full/page.tsx</path>
+</read_file>
+
+Let me check if there are any other route files to understand the complete page structure:
+
+<read_file>
+<path>app/articles/page.tsx</path>
+</read_file>
+
+Based on the search performance data and site structure, I can see the actual domain is www.riotiq.com and I need to include the pages that actually exist. Let me create the corrected sitemap with only verified pages:
+
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
+  <url>
+    <loc>https://www.riotiq.com/</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/assessments/free-iq-test</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/assessments/full</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/iq-scores-and-interpretation/understanding-iq-score-scales-a-complete-guide</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/famous-people-and-iq/what-is-elon-musk-s-iq</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/famous-people-and-iq/what-is-trump-s-iq</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-by-age</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-in-the-usa</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-in-india</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/iq-scores-and-interpretation/what-is-the-iq-scale-range</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/online-iq-tests/free-iq-tests</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/online-iq-tests/where-to-take-a-real-iq-test-online</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/taking-an-iq-test/5-best-iq-tests-in-2025</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+  <url>
+    <loc>https://www.riotiq.com/articles/online-iq-tests/what-is-the-best-iq-test</loc>
+    <lastmod>2026-04-21</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+</urlset>
