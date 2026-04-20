@@ -1,0 +1,20 @@
+User-agent: *
+Allow: /
+
+# Allow all major search engines to crawl
+User-agent: Googlebot
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+# Block any admin or test pages (if they exist)
+Disallow: /admin/
+Disallow: /test-internal/
+Disallow: /*.json$
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl-delay for politeness
+Crawl-delay: 1
