@@ -1,0 +1,21 @@
+User-agent: *
+Allow: /
+
+# Allow crawling of main pages
+Allow: /test
+Allow: /about
+Allow: /faq
+Allow: /blog
+Allow: /contact
+
+# Block admin and development paths
+Disallow: /admin/
+Disallow: /api/
+Disallow: /_next/
+Disallow: /private/
+
+# Sitemap location
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl delay for respectful crawling
+Crawl-delay: 1
