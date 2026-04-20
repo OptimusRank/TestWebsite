@@ -1,0 +1,32 @@
+User-agent: *
+Allow: /
+
+# High-value pages - encourage crawling
+Allow: /test
+Allow: /articles/
+Allow: /assessments/
+Allow: /famous-people-iq/
+
+# Block admin and dev pages
+Disallow: /admin
+Disallow: /api/
+Disallow: /dev/
+Disallow: /_next/
+Disallow: /tmp/
+
+# Block low-value utility pages
+Disallow: /search?
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+
+# Allow CSS, JS, images for proper rendering
+Allow: /css/
+Allow: /js/
+Allow: /_next/static/
+Allow: /images/
+Allow: /favicon.ico
+
+Sitemap: https://www.riotiq.com/sitemap.xml
+
+# Crawl delay for courtesy
+Crawl-delay: 1
