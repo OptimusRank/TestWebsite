@@ -13,6 +13,7 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
+  metadataBase: new URL('https://yourdomain.com'),
   title: "Free IQ Test Online | Certified Intelligence Assessment",
   description:
     "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
@@ -23,6 +24,9 @@ export const metadata: Metadata = {
     "online IQ test",
     "cognitive assessment",
   ],
+  alternates: {
+    canonical: '/'
+  },
   openGraph: {
     title: "Free IQ Test Online | Certified Intelligence Assessment",
     description:
