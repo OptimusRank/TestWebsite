@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Free IQ Test Online | Certified Intelligence Assessment",
+  title: "Free IQ Test Online - Get Your Intelligence Score in 20 Minutes",
   description:
-    "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
+    "Take the free IQ test trusted by 2.4M+ people worldwide. Get instant results with detailed cognitive breakdown. No signup required - start now!",
   keywords: [
     "IQ test",
     "intelligence test",
@@ -24,10 +24,14 @@ export const metadata: Metadata = {
     "cognitive assessment",
   ],
   openGraph: {
-    title: "Free IQ Test Online | Certified Intelligence Assessment",
+    title: "Free IQ Test Online - Get Your Intelligence Score in 20 Minutes",
     description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+      "Take the free IQ test trusted by 2.4M+ people worldwide. Get instant results with detailed cognitive breakdown. No signup required - start now!",
     type: "website",
+    url: "https://www.riotiq.com/",
+  },
+  alternates: {
+    canonical: "https://www.riotiq.com/",
   },
 };
 
@@ -39,10 +43,30 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    "name": "RiotIQ",
+    "url": "https://www.riotiq.com",
+    "logo": "https://www.riotiq.com/logo.png",
+    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis.",
+    "foundingDate": "2020",
+    "serviceType": "Intelligence Testing",
+    "areaServed": "Worldwide",
+    "aggregateRating": {
+      "@type": "AggregateRating",
+      "ratingValue": "4.8",
+      "reviewCount": "2400000"
+    }
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    "name": "RiotIQ - Free IQ Test Online",
+    "url": "https://www.riotiq.com",
+    "potentialAction": {
+      "@type": "SearchAction",
+      "target": "https://www.riotiq.com/search?q={search_term_string}",
+      "query-input": "required name=search_term_string"
+    }
   };
 
   return (
@@ -54,6 +78,10 @@ export default function RootLayout({
         <script
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
