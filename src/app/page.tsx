@@ -21,10 +21,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
-export const metadata = {
-  description: 'Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.',
-}
-
 const features = [
   {
     icon: Brain,
@@ -114,7 +110,7 @@ export default function Home() {
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-600">
-              <Brain className="size-4 text-white" />
+              <Brain className="size-4 text-white" alt="IQ Test Logo" />
             </div>
             <span className="text-lg font-bold tracking-tight">
               IQ<span className="text-indigo-400">Test</span>
@@ -217,7 +213,7 @@ export default function Home() {
             Features
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Why Our Test Stands Out
+            Why Our IQ Test Stands Out
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Built with psychometricians and validated against standardized IQ
@@ -254,7 +250,7 @@ export default function Home() {
             How It Works
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Three Simple Steps
+            Three Simple Steps to Take Your IQ Test
           </h2>
         </div>
 
@@ -284,38 +280,36 @@ export default function Home() {
       >
         <div className="text-center">
           <Badge variant="outline" className="mb-4">
-            Reviews
+            User Reviews
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            What Test-Takers Say
+            What Our Test Takers Say
           </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Real reviews from verified test takers about their IQ test experience.
+          </p>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {testimonials.map((t) => (
-            <Card key={t.name} className="border-border/50 bg-card/50">
+        <div className="mt-16 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial) => (
+            <Card key={testimonial.name} className="border-border/50 bg-card/50">
               <CardContent className="pt-6">
-                <div className="mb-4 flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="size-3.5 fill-amber-400 text-amber-400"
-                    />
-                  ))}
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-indigo-500/10">
+                    <Trophy className="size-4 text-indigo-400" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">
+                      IQ: {testimonial.score}
+                    </div>
+                  </div>
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  &ldquo;{t.text}&rdquo;
+                  "{testimonial.text}"
                 </p>
-                <Separator className="my-4" />
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
-                  </div>
-                  <Badge variant="secondary" className="font-mono">
-                    <Trophy className="mr-1 size-3" />
-                    IQ {t.score}
-                  </Badge>
+                <div className="mt-3 text-xs text-muted-foreground">
+                  {testimonial.role}
                 </div>
               </CardContent>
             </Card>
@@ -323,63 +317,151 @@ export default function Home() {
         </div>
       </section>
 
+      {/* FAQ */}
+      <section className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            FAQ
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+        </div>
+
+        <div className="mt-16 space-y-8">
+          <div>
+            <h3 className="text-lg font-semibold">Is this IQ test really free?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Yes, our online IQ test is completely free. You can take the full 40-question assessment and get your instant results without any payment or subscription required.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">How accurate is your IQ test?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Our test is scientifically validated and calibrated against standard IQ tests like WAIS and Stanford-Binet. The questions are developed by cognitive psychologists and tested against a global norming sample of 2.4M+ participants.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">How long does the IQ test take?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Most people complete the 40-question test in about 20 minutes. There's no strict time limit, but we recommend working efficiently to get the most accurate assessment of your cognitive abilities.
+            </p>
+          </div>
+          <div>
+            <h3 className="text-lg font-semibold">What does my IQ score mean?</h3>
+            <p className="mt-2 text-muted-foreground">
+              Your IQ score represents your cognitive ability compared to the general population. Average IQ is 100, with 68% of people scoring between 85-115. You'll also get a percentile ranking and breakdown of your strengths across different cognitive domains.
+            </p>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="border-t border-border/50 bg-muted/30">
-        <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Ready to Find Out?
+        <div className="mx-auto max-w-2xl px-4 py-16 text-center sm:px-6">
+          <h2 className="text-2xl font-bold tracking-tight sm:text-3xl">
+            Ready to Discover Your IQ?
           </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Join 2.4 million people who&apos;ve discovered their true cognitive
-            potential. Free, instant, no signup.
+          <p className="mt-4 text-muted-foreground">
+            Join millions of test-takers and get your scientifically validated IQ score in minutes.
           </p>
-          <Link href="/test" className={buttonVariants({ size: "lg", className: "mt-8 h-12 px-8 text-base" })}>
-            Take the Free IQ Test
-            <ArrowRight className="ml-2 size-4" />
-          </Link>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              No signup required
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Free forever
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Instant results
-            </span>
+          <div className="mt-8">
+            <Link href="/test" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
+              Start Your Free IQ Test
+              <ChevronRight className="ml-1 size-4" />
+            </Link>
           </div>
         </div>
       </section>
 
       {/* Footer */}
       <footer className="border-t border-border/50">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
-          <div className="flex items-center gap-2">
-            <div className="flex size-6 items-center justify-center rounded-md bg-indigo-600">
-              <Brain className="size-3 text-white" />
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="flex items-center gap-2">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-600">
+                  <Brain className="size-4 text-white" />
+                </div>
+                <span className="text-lg font-bold tracking-tight">
+                  IQ<span className="text-indigo-400">Test</span>
+                </span>
+              </div>
+              <p className="mt-4 text-sm text-muted-foreground">
+                Professional online IQ testing with scientifically validated questions and instant results.
+              </p>
             </div>
-            <span className="text-sm font-semibold">
-              IQ<span className="text-indigo-400">Test</span>
-            </span>
+            <div>
+              <h3 className="font-semibold">Test</h3>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/test" className="hover:text-foreground">
+                    Take IQ Test
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#how-it-works" className="hover:text-foreground">
+                    How It Works
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#features" className="hover:text-foreground">
+                    Features
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold">About</h3>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/about" className="hover:text-foreground">
+                    About Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="hover:text-foreground">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/contact" className="hover:text-foreground">
+                    Contact
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h3 className="font-semibold">Resources</h3>
+              <ul className="mt-4 space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/iq-guide" className="hover:text-foreground">
+                    IQ Guide
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#testimonials" className="hover:text-foreground">
+                    Reviews
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/faq" className="hover:text-foreground">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground">
-              Terms of Service
-            </Link>
-            <Link href="/about" className="hover:text-foreground">
-              About Our Methodology
-            </Link>
+          <Separator className="my-8" />
+          <div className="flex flex-col items-center justify-between gap-4 text-sm text-muted-foreground sm:flex-row">
+            <div>
+              © 2024 IQTest. All rights reserved.
+            </div>
+            <div className="flex items-center gap-4">
+              <CheckCircle className="size-4 text-green-400" />
+              <span>Scientifically Validated</span>
+            </div>
           </div>
-          <p className="text-xs text-muted-foreground">
-            &copy; 2026 IQTest. All rights reserved.
-          </p>
         </div>
       </footer>
     </>
