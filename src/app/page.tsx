@@ -21,10 +21,6 @@ import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
 
-export const metadata = {
-  description: 'Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and detailed cognitive breakdown.',
-}
-
 const features = [
   {
     icon: Brain,
@@ -67,9 +63,9 @@ const features = [
 const steps = [
   {
     number: "01",
-    title: "Start the test",
+    title: "Start the IQ test",
     description:
-      "No signup required. Click start and begin immediately. The timer starts when you're ready.",
+      "No signup required. Click start and begin your intelligence assessment immediately. The timer starts when you're ready.",
   },
   {
     number: "02",
@@ -79,9 +75,9 @@ const steps = [
   },
   {
     number: "03",
-    title: "Get your results",
+    title: "Get your IQ score",
     description:
-      "Instantly see your IQ score, percentile ranking, and a breakdown of your cognitive strengths.",
+      "Instantly see your intelligence score, percentile ranking, and a breakdown of your cognitive strengths.",
   },
 ]
 
@@ -89,26 +85,64 @@ const testimonials = [
   {
     name: "Sarah K.",
     score: 138,
-    text: "Finally a test that feels legitimate. The breakdown of my cognitive strengths was incredibly detailed.",
+    text: "Finally an IQ test that feels legitimate. The breakdown of my cognitive strengths was incredibly detailed.",
     role: "Software Engineer",
   },
   {
     name: "Marcus J.",
     score: 125,
-    text: "Took this on my phone during lunch break. Clean interface, no spam, genuinely interesting questions.",
+    text: "Took this IQ test on my phone during lunch break. Clean interface, no spam, genuinely interesting questions.",
     role: "Product Designer",
   },
   {
     name: "Priya R.",
     score: 142,
-    text: "The pattern recognition section was challenging in a way that felt fair, not tricky. Highly recommend.",
+    text: "The pattern recognition section was challenging in a way that felt fair, not tricky. Best online IQ test I've taken.",
     role: "Data Scientist",
   },
 ]
 
+const faqs = [
+  {
+    question: "How accurate is this IQ test?",
+    answer: "Our IQ test is calibrated against standardized assessments like WAIS and Stanford-Binet, with questions developed by cognitive psychologists. While no online test can replace a professional assessment, our results correlate strongly with standardized IQ tests."
+  },
+  {
+    question: "How long does the IQ test take?",
+    answer: "The complete IQ test takes about 20 minutes on average. You'll answer 40 questions of increasing difficulty across different cognitive areas including pattern recognition, logical reasoning, and spatial awareness."
+  },
+  {
+    question: "Is this IQ test really free?",
+    answer: "Yes, our IQ test is completely free. You get your score, percentile ranking, and detailed cognitive breakdown at no cost. No hidden fees, no credit card required, no subscription needed."
+  },
+  {
+    question: "What IQ score is considered high?",
+    answer: "An IQ score of 130 or above is typically considered high intelligence (top 2%). Average IQ is around 100, with 68% of people scoring between 85-115. Scores above 140 are considered very high intelligence."
+  }
+]
+
 export default function Home() {
+  const faqSchema = {
+    "@context": "https://schema.org",
+    "@type": "FAQPage",
+    "mainEntity": faqs.map(faq => ({
+      "@type": "Question",
+      "name": faq.question,
+      "acceptedAnswer": {
+        "@type": "Answer",
+        "text": faq.answer
+      }
+    }))
+  };
+
   return (
     <>
+      {/* JSON-LD Schema */}
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
@@ -117,7 +151,7 @@ export default function Home() {
               <Brain className="size-4 text-white" />
             </div>
             <span className="text-lg font-bold tracking-tight">
-              IQ<span className="text-indigo-400">Test</span>
+              Riot<span className="text-indigo-400">IQ</span>
             </span>
           </Link>
           <div className="hidden items-center gap-8 md:flex">
@@ -140,14 +174,14 @@ export default function Home() {
               Reviews
             </Link>
             <Link
-              href="/about"
+              href="#faq"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              About
+              FAQ
             </Link>
           </div>
           <Link href="/test" className={buttonVariants()}>
-            Start Test <ArrowRight className="ml-1 size-4" />
+            Take IQ Test <ArrowRight className="ml-1 size-4" />
           </Link>
         </div>
       </nav>
@@ -173,14 +207,13 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            Take our scientifically validated IQ test and discover your cognitive abilities across pattern recognition, logical reasoning, and spatial
+            awareness. Get your intelligence score instantly with detailed analysis.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/test" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
-              Take the Free Test
+              Start Free IQ Test
               <ChevronRight className="ml-1 size-4" />
             </Link>
             <Link href="#how-it-works" className={buttonVariants({ size: "lg", variant: "outline", className: "h-12 px-8 text-base" })}>
@@ -194,7 +227,7 @@ export default function Home() {
       <section className="border-y border-border/50 bg-muted/30">
         <div className="mx-auto grid max-w-4xl grid-cols-2 gap-8 px-4 py-12 sm:grid-cols-4 sm:px-6">
           {[
-            { value: "2.4M+", label: "Tests Completed", icon: Users },
+            { value: "2.4M+", label: "IQ Tests Completed", icon: Users },
             { value: "40", label: "Questions", icon: Brain },
             { value: "20 min", label: "Average Time", icon: Clock },
             { value: "4.8", label: "User Rating", icon: Star },
@@ -217,7 +250,7 @@ export default function Home() {
             Features
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Why Our Test Stands Out
+            Why Our IQ Test Stands Out
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Built with psychometricians and validated against standardized IQ
@@ -254,7 +287,7 @@ export default function Home() {
             How It Works
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Three Simple Steps
+            Taking Your IQ Test: Three Simple Steps
           </h2>
         </div>
 
@@ -287,36 +320,56 @@ export default function Home() {
             Reviews
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            What Test-Takers Say
+            What People Say About Our IQ Test
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Real feedback from users who have taken our intelligence assessment.
+          </p>
+        </div>
+
+        <div className="mt-16 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+          {testimonials.map((testimonial, index) => (
+            <Card key={index} className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <div className="mb-4 flex items-center gap-3">
+                  <div className="flex size-10 items-center justify-center rounded-full bg-indigo-500/10">
+                    <Trophy className="size-4 text-indigo-400" />
+                  </div>
+                  <div>
+                    <div className="font-semibold">{testimonial.name}</div>
+                    <div className="text-sm text-muted-foreground">
+                      IQ Score: {testimonial.score} | {testimonial.role}
+                    </div>
+                  </div>
+                </div>
+                <blockquote className="text-sm leading-relaxed text-muted-foreground">
+                  "{testimonial.text}"
+                </blockquote>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <Separator className="mx-auto max-w-6xl" />
+
+      {/* FAQ */}
+      <section id="faq" className="mx-auto max-w-4xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            FAQ
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Frequently Asked Questions About IQ Tests
           </h2>
         </div>
 
-        <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {testimonials.map((t) => (
-            <Card key={t.name} className="border-border/50 bg-card/50">
+        <div className="mt-16 space-y-6">
+          {faqs.map((faq, index) => (
+            <Card key={index} className="border-border/50 bg-card/50">
               <CardContent className="pt-6">
-                <div className="mb-4 flex items-center gap-1">
-                  {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="size-3.5 fill-amber-400 text-amber-400"
-                    />
-                  ))}
-                </div>
-                <p className="text-sm leading-relaxed text-muted-foreground">
-                  &ldquo;{t.text}&rdquo;
-                </p>
-                <Separator className="my-4" />
-                <div className="flex items-center justify-between">
-                  <div>
-                    <p className="text-sm font-medium">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
-                  </div>
-                  <Badge variant="secondary" className="font-mono">
-                    <Trophy className="mr-1 size-3" />
-                    IQ {t.score}
-                  </Badge>
-                </div>
+                <h3 className="text-lg font-semibold mb-3">{faq.question}</h3>
+                <p className="text-muted-foreground leading-relaxed">{faq.answer}</p>
               </CardContent>
             </Card>
           ))}
@@ -324,62 +377,107 @@ export default function Home() {
       </section>
 
       {/* CTA */}
-      <section className="border-t border-border/50 bg-muted/30">
-        <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Ready to Find Out?
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Join 2.4 million people who&apos;ve discovered their true cognitive
-            potential. Free, instant, no signup.
-          </p>
-          <Link href="/test" className={buttonVariants({ size: "lg", className: "mt-8 h-12 px-8 text-base" })}>
-            Take the Free IQ Test
-            <ArrowRight className="ml-2 size-4" />
-          </Link>
-
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              No signup required
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Free forever
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Instant results
-            </span>
-          </div>
-        </div>
+      <section className="mx-auto max-w-4xl px-4 pb-24 sm:px-6">
+        <Card className="border-indigo-500/20 bg-gradient-to-r from-indigo-500/10 to-violet-500/10">
+          <CardContent className="py-16 text-center">
+            <Brain className="mx-auto mb-6 size-12 text-indigo-400" />
+            <h2 className="mb-4 text-3xl font-bold">
+              Ready to Discover Your Intelligence?
+            </h2>
+            <p className="mx-auto mb-8 max-w-xl text-muted-foreground">
+              Join millions who have taken our free IQ test. Get your score, detailed analysis, and cognitive breakdown in just 20 minutes.
+            </p>
+            <Link
+              href="/test"
+              className={buttonVariants({
+                size: "lg",
+                className: "h-12 px-8 text-base",
+              })}
+            >
+              Take the Free IQ Test Now
+              <ChevronRight className="ml-1 size-4" />
+            </Link>
+          </CardContent>
+        </Card>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
-          <div className="flex items-center gap-2">
-            <div className="flex size-6 items-center justify-center rounded-md bg-indigo-600">
-              <Brain className="size-3 text-white" />
+      <footer className="border-t border-border/50 bg-muted/30">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <div className="grid gap-8 sm:grid-cols-2 lg:grid-cols-4">
+            <div>
+              <div className="mb-4 flex items-center gap-2">
+                <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-600">
+                  <Brain className="size-4 text-white" />
+                </div>
+                <span className="text-lg font-bold">
+                  Riot<span className="text-indigo-400">IQ</span>
+                </span>
+              </div>
+              <p className="text-sm text-muted-foreground">
+                Professional IQ testing with scientifically validated assessments and instant results.
+              </p>
             </div>
-            <span className="text-sm font-semibold">
-              IQ<span className="text-indigo-400">Test</span>
-            </span>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold">IQ Test</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/test" className="hover:text-foreground">
+                    Take Free IQ Test
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#how-it-works" className="hover:text-foreground">
+                    How It Works
+                  </Link>
+                </li>
+                <li>
+                  <Link href="#faq" className="hover:text-foreground">
+                    FAQ
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold">About</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/about" className="hover:text-foreground">
+                    About RiotIQ
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/privacy" className="hover:text-foreground">
+                    Privacy Policy
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/terms" className="hover:text-foreground">
+                    Terms of Service
+                  </Link>
+                </li>
+              </ul>
+            </div>
+            <div>
+              <h4 className="mb-3 text-sm font-semibold">Connect</h4>
+              <ul className="space-y-2 text-sm text-muted-foreground">
+                <li>
+                  <Link href="/contact" className="hover:text-foreground">
+                    Contact Us
+                  </Link>
+                </li>
+                <li>
+                  <Link href="/support" className="hover:text-foreground">
+                    Support
+                  </Link>
+                </li>
+              </ul>
+            </div>
           </div>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground">
-              Terms of Service
-            </Link>
-            <Link href="/about" className="hover:text-foreground">
-              About Our Methodology
-            </Link>
+          <Separator className="my-8" />
+          <div className="text-center text-sm text-muted-foreground">
+            <p>© 2024 RiotIQ. All rights reserved.</p>
           </div>
-          <p className="text-xs text-muted-foreground">
-            &copy; 2026 IQTest. All rights reserved.
-          </p>
         </div>
       </footer>
     </>
