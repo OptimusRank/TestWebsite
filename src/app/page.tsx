@@ -173,9 +173,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            Take the RIOT (Reasoning and Intelligence Online Test) - the most accurate free IQ test trusted by millions worldwide. Our scientifically validated RiotIQ assessment measures your cognitive abilities across pattern recognition, logical reasoning, and spatial awareness. Compare your IQ score to celebrities like Elon Musk's IQ (estimated 155) and discover where you rank on the IQ scale and ranges. Completely free with instant results.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
