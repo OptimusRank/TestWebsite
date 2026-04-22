@@ -5,15 +5,6 @@ Allow: /
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
-Disallow: /test/results/
-
-# Allow important crawlable paths
-Allow: /test/
-Allow: /about/
-Allow: /contact/
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
-
-# Crawl delay for respectful crawling
-Crawl-delay: 1
