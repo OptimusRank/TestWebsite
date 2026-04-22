@@ -6,6 +6,7 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /test/results/
+Disallow: /*.json$
 
 # Allow important crawlable paths
 Allow: /test/
@@ -17,3 +18,10 @@ Sitemap: https://www.riotiq.com/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1
+
+# Block specific bots that don't add value
+User-agent: AhrefsBot
+Crawl-delay: 5
+
+User-agent: SemrushBot
+Crawl-delay: 5
