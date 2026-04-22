@@ -1,16 +1,19 @@
 User-agent: *
 Allow: /
 
+# Allow main pages
+Allow: /test/
+Allow: /about/
+Allow: /contact/
+Allow: /privacy/
+Allow: /terms/
+
 # Disallow admin and internal pages
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /test/results/
-
-# Allow important crawlable paths
-Allow: /test/
-Allow: /about/
-Allow: /contact/
+Disallow: /test/session/
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
