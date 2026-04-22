@@ -11,6 +11,8 @@ Disallow: /test/results/
 Allow: /test/
 Allow: /about/
 Allow: /contact/
+Allow: /faq/
+Allow: /methodology/
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
