@@ -1,16 +1,25 @@
 User-agent: *
 Allow: /
 
+# Prioritize high-value pages for crawling
+Allow: /test/
+Allow: /articles/
+Allow: /assessments/
+
 # Disallow admin and internal pages
 Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /test/results/
 
-# Allow important crawlable paths
-Allow: /test/
+# Allow important crawlable paths  
 Allow: /about/
 Allow: /contact/
+
+# Block unnecessary resource consumption
+Disallow: /*?utm_*
+Disallow: /*?ref=*
+Disallow: /*?campaign=*
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
