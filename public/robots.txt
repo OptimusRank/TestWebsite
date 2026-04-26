@@ -7,12 +7,11 @@ Disallow: /api/
 Disallow: /_next/
 Disallow: /test/results/
 
-# Allow important crawlable paths
+# Important pages for IQ test
 Allow: /test/
-Allow: /about/
-Allow: /contact/
+Allow: /
 
-# Sitemap location
+# Sitemap location  
 Sitemap: https://www.riotiq.com/sitemap.xml
 
 # Crawl delay for respectful crawling
