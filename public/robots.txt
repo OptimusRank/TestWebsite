@@ -12,7 +12,7 @@ Allow: /test/
 Allow: /about/
 Allow: /contact/
 
-# Sitemap location
+# Sitemap location 
 Sitemap: https://www.riotiq.com/sitemap.xml
 
 # Crawl delay for respectful crawling
