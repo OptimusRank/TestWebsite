@@ -29,6 +29,9 @@ export const metadata: Metadata = {
       "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
     type: "website",
   },
+  alternates: {
+    canonical: 'https://yourdomain.com/',
+  },
 };
 
 export default function RootLayout({
