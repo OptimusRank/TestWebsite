@@ -183,6 +183,18 @@ export default function Home() {
               How It Works
             </Link>
           </div>
+
+          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
+            <Link href="/iq-scores" className="hover:text-indigo-400 transition-colors">
+              Learn about IQ score ranges
+            </Link>
+            <Link href="/celebrity-iq/elon-musk" className="hover:text-indigo-400 transition-colors">
+              Compare your IQ to Elon Musk's IQ
+            </Link>
+            <Link href="/country-iq-averages" className="hover:text-indigo-400 transition-colors">
+              Understand average IQ in different countries
+            </Link>
+          </div>
         </div>
       </section>
 
