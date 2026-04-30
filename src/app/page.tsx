@@ -169,9 +169,7 @@ export default function Home() {
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            The RIOT (Reasoning and Intelligence Online Test) platform offers the same scientifically validated assessment used to measure IQ ranges and compare scores with famous figures like Elon Musk's IQ and Trump's IQ. Discover where you rank on the IQ scale with instant results.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
