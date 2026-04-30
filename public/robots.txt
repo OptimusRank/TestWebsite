@@ -15,5 +15,5 @@ Allow: /contact/
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
 
-# Crawl delay for respectful crawling
-Crawl-delay: 1
+# Crawl delay for respectful crawling (reduced for better indexing)
+Crawl-delay: 0.5
