@@ -1,16 +1,10 @@
 User-agent: *
 Allow: /
 
-# Disallow admin and internal pages
-Disallow: /admin/
-Disallow: /api/
+# Allow crawling of all content
+# Disallow Next.js build files and API routes
 Disallow: /_next/
-Disallow: /test/results/
-
-# Allow important crawlable paths
-Allow: /test/
-Allow: /about/
-Allow: /contact/
+Disallow: /api/
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
