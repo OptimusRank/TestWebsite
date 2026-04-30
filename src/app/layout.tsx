@@ -13,21 +13,19 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Free IQ Test Online | Certified Intelligence Assessment",
+  title: "IQ Test - Free Online Intelligence Test (2025)",
   description:
-    "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
-  keywords: [
-    "IQ test",
-    "intelligence test",
-    "free IQ test",
-    "online IQ test",
-    "cognitive assessment",
-  ],
+    "Take our free IQ test online and get your score instantly. 40 scientifically validated questions, immediate results, trusted by 2.4M+ people worldwide.",
+  viewport: "width=device-width, initial-scale=1",
   openGraph: {
-    title: "Free IQ Test Online | Certified Intelligence Assessment",
+    title: "IQ Test - Free Online Intelligence Test (2025)",
     description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+      "Take our free IQ test online and get your score instantly. 40 scientifically validated questions, immediate results, trusted by 2.4M+ people worldwide.",
     type: "website",
+    url: "https://www.riotiq.com",
+  },
+  alternates: {
+    canonical: "https://www.riotiq.com",
   },
 };
 
@@ -39,9 +37,9 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
+    "name": "RiotIQ",
+    "url": "https://www.riotiq.com",
+    "logo": "https://www.riotiq.com/logo.png",
     "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
   };
 
