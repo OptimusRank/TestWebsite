@@ -121,25 +121,25 @@ export default function Home() {
               href="#features"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Features
+              IQ Test Features
             </Link>
             <Link
               href="#how-it-works"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              How It Works
+              How RIOT Test Works
             </Link>
             <Link
               href="#testimonials"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Reviews
+              Test Reviews
             </Link>
             <Link
               href="/about"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              About
+              About Our IQ Assessment
             </Link>
           </div>
           <Link href="/test" className={buttonVariants()}>
