@@ -12,8 +12,16 @@ Allow: /test/
 Allow: /about/
 Allow: /contact/
 
-# Sitemap location
+# Sitemap location  
 Sitemap: https://www.riotiq.com/sitemap.xml
 
 # Crawl delay for respectful crawling
 Crawl-delay: 1
+
+# Additional optimization
+User-agent: Googlebot
+Crawl-delay: 0
+
+# Specific allowance for key pages
+Allow: /test$
+Allow: /test/
