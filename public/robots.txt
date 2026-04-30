@@ -6,11 +6,14 @@ Disallow: /admin/
 Disallow: /api/
 Disallow: /_next/
 Disallow: /test/results/
+Disallow: /test/in-progress/
 
 # Allow important crawlable paths
 Allow: /test/
 Allow: /about/
 Allow: /contact/
+Allow: /privacy/
+Allow: /terms/
 
 # Sitemap location
 Sitemap: https://www.riotiq.com/sitemap.xml
