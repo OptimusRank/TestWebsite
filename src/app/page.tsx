@@ -105,6 +105,13 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({"@context":"https://schema.org","@type":"FAQPage","mainEntity":[{"@type":"Question","name":"How accurate is this IQ test?","acceptedAnswer":{"@type":"Answer","text":"Our IQ test is scientifically validated and calibrated against WAIS and Stanford-Binet scales, providing accurate measurements of cognitive abilities."}},{"@type":"Question","name":"How long does the IQ test take?","acceptedAnswer":{"@type":"Answer","text":"The IQ test takes approximately 20 minutes to complete with 40 progressive questions."}}]})
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
