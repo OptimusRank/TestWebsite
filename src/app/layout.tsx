@@ -13,9 +13,9 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Free IQ Test Online | Certified Intelligence Assessment",
+  title: "Free IQ Test - Get Your Score in 20 Minutes | RiotIQ",
   description:
-    "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
+    "Take our free online IQ test and discover your intelligence score instantly. 40 scientifically validated questions, detailed cognitive breakdown, trusted by 2.4M+ users worldwide.",
   keywords: [
     "IQ test",
     "intelligence test",
@@ -24,10 +24,14 @@ export const metadata: Metadata = {
     "cognitive assessment",
   ],
   openGraph: {
-    title: "Free IQ Test Online | Certified Intelligence Assessment",
+    title: "Free IQ Test - Get Your Score in 20 Minutes | RiotIQ",
     description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+      "Take our free online IQ test and discover your intelligence score instantly. 40 scientifically validated questions, detailed cognitive breakdown, trusted by 2.4M+ users worldwide.",
     type: "website",
+    url: "https://www.riotiq.com/",
+  },
+  alternates: {
+    canonical: "https://www.riotiq.com/",
   },
 };
 
@@ -39,10 +43,21 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    "name": "RiotIQ",
+    "url": "https://www.riotiq.com",
+    "logo": "https://www.riotiq.com/logo.png",
+    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis.",
+    "foundingDate": "2020",
+    "sameAs": [
+      "https://www.facebook.com/riotiq",
+      "https://www.twitter.com/riotiq"
+    ],
+    "contactPoint": {
+      "@type": "ContactPoint",
+      "contactType": "Customer Service",
+      "areaServed": "Worldwide",
+      "availableLanguage": "English"
+    }
   };
 
   return (
