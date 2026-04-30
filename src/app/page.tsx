@@ -110,7 +110,7 @@ export default function Home() {
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
           <Link href="/" className="flex items-center gap-2">
             <div className="flex size-8 items-center justify-center rounded-lg bg-indigo-600">
-              <Brain className="size-4 text-white" />
+              <Brain className="size-4 text-white" aria-label="RIOT IQ Test brain icon" />
             </div>
             <span className="text-lg font-bold tracking-tight">
               IQ<span className="text-indigo-400">Test</span>
