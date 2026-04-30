@@ -105,6 +105,41 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "FAQPage",
+            "mainEntity": [
+              {
+                "@type": "Question",
+                "name": "How accurate is this IQ test?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Our IQ test is scientifically validated and calibrated against established scales like WAIS and Stanford-Binet. Questions are developed by cognitive psychologists and the test has been taken by over 2.4 million people worldwide."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "How long does the IQ test take?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "The IQ test takes approximately 20 minutes to complete. It consists of 40 questions that progressively increase in difficulty across various cognitive domains."
+                }
+              },
+              {
+                "@type": "Question",
+                "name": "Is this IQ test free?",
+                "acceptedAnswer": {
+                  "@type": "Answer",
+                  "text": "Yes, our IQ test is completely free to take. No signup is required, and you'll receive instant results including your IQ score, percentile ranking, and detailed cognitive breakdown at no cost."
+                }
+              }
+            ]
+          })
+        }}
+      />
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
