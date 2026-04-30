@@ -113,7 +113,7 @@ export default function Home() {
               <Brain className="size-4 text-white" />
             </div>
             <span className="text-lg font-bold tracking-tight">
-              IQ<span className="text-indigo-400">Test</span>
+              RiotIQ - The RIOT IQ Test
             </span>
           </Link>
           <div className="hidden items-center gap-8 md:flex">
@@ -359,7 +359,7 @@ export default function Home() {
               <Brain className="size-3 text-white" />
             </div>
             <span className="text-sm font-semibold">
-              IQ<span className="text-indigo-400">Test</span>
+              RiotIQ - The RIOT IQ Test
             </span>
           </div>
           <div className="flex gap-6 text-xs text-muted-foreground">
@@ -374,7 +374,7 @@ export default function Home() {
             </Link>
           </div>
           <p className="text-xs text-muted-foreground">
-            &copy; 2026 IQTest. All rights reserved.
+            &copy; 2026 RiotIQ - The RIOT IQ Test. All rights reserved.
           </p>
         </div>
       </footer>
