@@ -1,6 +1,7 @@
 "use client"
 
 import Link from "next/link"
+import Head from "next/head"
 import {
   Brain,
   Zap,
@@ -105,6 +106,9 @@ const testimonials = [
 export default function Home() {
   return (
     <>
+      <Head>
+        <link rel="canonical" href="https://yourdomain.com/" />
+      </Head>
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
