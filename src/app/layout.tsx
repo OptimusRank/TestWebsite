@@ -28,6 +28,8 @@ export const metadata: Metadata = {
     description:
       "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
     type: "website",
+    url: "https://www.riotiq.com/",
+    site_name: "RiotIQ",
   },
 };
 
