@@ -15,6 +15,7 @@ import {
   Trophy,
   ArrowRight,
   CheckCircle,
+  HelpCircle,
 } from "lucide-react"
 import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
@@ -99,6 +100,33 @@ const testimonials = [
     score: 142,
     text: "The pattern recognition section was challenging in a way that felt fair, not tricky. Highly recommend.",
     role: "Data Scientist",
+  },
+]
+
+const faqData = [
+  {
+    question: "What is Elon Musk's IQ?",
+    answer: "While Elon Musk's exact IQ score has never been officially confirmed, experts estimate it to be around 150-155 based on his achievements in engineering, business, and problem-solving across multiple industries.",
+  },
+  {
+    question: "What is Trump's IQ?",
+    answer: "Donald Trump's IQ has been the subject of speculation, with various unverified claims ranging from 120-156. However, no official IQ test results have ever been publicly released or confirmed.",
+  },
+  {
+    question: "What are normal IQ ranges?",
+    answer: "Normal IQ ranges are: 85-115 (average), 115-129 (above average), 130+ (gifted), 70-84 (below average). About 68% of people score between 85-115, with 100 being the average score.",
+  },
+  {
+    question: "What is the average IQ in India?",
+    answer: "Studies suggest the average IQ in India ranges from 82-85, though this varies significantly by region, education access, and socioeconomic factors. Urban areas typically show higher averages than rural regions.",
+  },
+  {
+    question: "How accurate are online IQ tests?",
+    answer: "Well-designed online IQ tests can provide reasonably accurate estimates when properly calibrated against standard tests like WAIS-IV. Our test is validated against established IQ scales for reliability.",
+  },
+  {
+    question: "Can IQ be improved?",
+    answer: "While core IQ is relatively stable, certain cognitive skills can be enhanced through practice, education, and brain training. Working memory and processing speed often show the most improvement potential.",
   },
 ]
 
@@ -312,6 +340,46 @@ export default function Home() {
                     <Trophy className="mr-1 size-3" />
                     IQ {t.score}
                   </Badge>
+                </div>
+              </CardContent>
+            </Card>
+          ))}
+        </div>
+      </section>
+
+      <Separator className="mx-auto max-w-6xl" />
+
+      {/* FAQ */}
+      <section
+        id="faq"
+        className="mx-auto max-w-4xl px-4 py-24 sm:px-6"
+      >
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            FAQ
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Common questions about IQ testing, scores, and intelligence measurement.
+          </p>
+        </div>
+
+        <div className="mt-16 space-y-6">
+          {faqData.map((faq, index) => (
+            <Card key={index} className="border-border/50 bg-card/50">
+              <CardContent className="pt-6">
+                <div className="flex gap-4">
+                  <div className="flex size-8 shrink-0 items-center justify-center rounded-lg bg-indigo-500/10">
+                    <HelpCircle className="size-4 text-indigo-400" />
+                  </div>
+                  <div className="space-y-2">
+                    <h3 className="text-lg font-semibold">{faq.question}</h3>
+                    <p className="text-muted-foreground leading-relaxed">
+                      {faq.answer}
+                    </p>
+                  </div>
                 </div>
               </CardContent>
             </Card>
