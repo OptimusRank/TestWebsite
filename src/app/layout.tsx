@@ -15,7 +15,7 @@ const geistMono = Geist_Mono({
 export const metadata: Metadata = {
   title: "Free IQ Test Online | Certified Intelligence Assessment",
   description:
-    "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
+    "Take the RIOT IQ Test (Reasoning and Intelligence Online Test) - free IQ assessment with instant results. Compare your score to celebrities like Elon Musk IQ and Trump IQ. Start now!",
   keywords: [
     "IQ test",
     "intelligence test",
