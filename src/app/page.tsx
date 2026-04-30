@@ -103,8 +103,27 @@ const testimonials = [
 ]
 
 export default function Home() {
+  const domain = typeof window !== 'undefined' ? window.location.origin : 'https://iqtest.com'
+  
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{
+          __html: JSON.stringify({
+            "@context": "https://schema.org",
+            "@type": "WebSite",
+            "name": "Free IQ Test Online",
+            "url": domain,
+            "potentialAction": {
+              "@type": "SearchAction",
+              "target": domain + "/search?q={search_term_string}",
+              "query-input": "required name=search_term_string"
+            }
+          })
+        }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
