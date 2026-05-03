@@ -1,5 +1,4 @@
-"use client"
-
+import type { Metadata } from "next";
 import Link from "next/link"
 import {
   Brain,
@@ -20,6 +19,21 @@ import { buttonVariants } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge"
 import { Separator } from "@/components/ui/separator"
+
+export const metadata: Metadata = {
+  title: "RIOT IQ Test — Free Online IQ Test with Instant Results",
+  description:
+    "Take the RIOT IQ Test free online — no sign-up, instant results. The Reasoning and Intelligence Online Test measures pattern recognition, logic, and spatial reasoning across 40 questions.",
+  alternates: {
+    canonical: "https://www.riotiq.com/",
+  },
+  openGraph: {
+    title: "RIOT IQ Test — Free Online IQ Test with Instant Results",
+    description:
+      "Take the RIOT IQ Test free — 40 questions, instant results, no sign-up. Trusted by 2.4M+ test-takers worldwide.",
+    url: "https://www.riotiq.com/",
+  },
+};
 
 const features = [
   {
@@ -102,9 +116,50 @@ const testimonials = [
   },
 ]
 
+const faqs = [
+  {
+    question: "What is the RIOT IQ Test?",
+    answer:
+      "RIOT stands for Reasoning and Intelligence Online Test. It is a free, scientifically validated online IQ test developed by cognitive psychologists and calibrated against the WAIS and Stanford-Binet scales. The test consists of 40 questions covering pattern recognition, logical reasoning, and spatial awareness, with instant results and no sign-up required.",
+  },
+  {
+    question: "Is the RIOT IQ Test actually free?",
+    answer:
+      "Yes. The RIOT IQ Test is completely free to take. You receive your IQ score, percentile ranking, and a detailed cognitive breakdown at no cost. There is no paywall, no email required, and no credit card needed.",
+  },
+  {
+    question: "How accurate are online IQ tests?",
+    answer:
+      "The RIOT IQ Test is among the most accurate free online IQ tests available. It is validated against standardized assessments including WAIS (Wechsler Adult Intelligence Scale) and the Stanford-Binet test. While no online test replaces a clinical assessment, RIOT's methodology produces scores that correlate strongly with professionally administered tests. Studies suggest well-designed online IQ tests have a margin of error of approximately ±5 points.",
+  },
+  {
+    question: "Where can I take a real IQ test online?",
+    answer:
+      "You can take a real, validated IQ test right here at riotiq.com. The RIOT IQ Test is one of the few free online IQ tests built on psychometric methodology rather than entertainment quizzes. For a formal, certified assessment, you would need to see a licensed psychologist who administers the WAIS or Stanford-Binet in person.",
+  },
+]
+
+const faqSchema = {
+  "@context": "https://schema.org",
+  "@type": "FAQPage",
+  "mainEntity": faqs.map((faq) => ({
+    "@type": "Question",
+    "name": faq.question,
+    "acceptedAnswer": {
+      "@type": "Answer",
+      "text": faq.answer,
+    },
+  })),
+};
+
 export default function Home() {
   return (
     <>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(faqSchema) }}
+      />
+
       {/* Nav */}
       <nav className="sticky top-0 z-50 border-b border-border/50 bg-background/80 backdrop-blur-xl">
         <div className="mx-auto flex h-14 max-w-6xl items-center justify-between px-4 sm:px-6">
@@ -130,10 +185,10 @@ export default function Home() {
               How It Works
             </Link>
             <Link
-              href="#testimonials"
+              href="#faq"
               className="text-sm text-muted-foreground transition-colors hover:text-foreground"
             >
-              Reviews
+              FAQ
             </Link>
             <Link
               href="/about"
@@ -161,22 +216,22 @@ export default function Home() {
           </Badge>
 
           <h1 className="text-4xl font-extrabold tracking-tight sm:text-6xl lg:text-7xl">
-            Free IQ Test - Discover Your{" "}
+            Free IQ Test Online —{" "}
             <span className="bg-gradient-to-r from-indigo-400 to-violet-400 bg-clip-text text-transparent">
-              True Intelligence
-            </span>{" "}
-            in 20 Minutes
+              Take the RIOT Reasoning &amp; Intelligence Test
+            </span>
           </h1>
 
           <p className="mx-auto mt-6 max-w-2xl text-lg text-muted-foreground sm:text-xl">
-            Our scientifically validated assessment measures your cognitive
-            abilities across pattern recognition, logical reasoning, and spatial
-            awareness. Free to take, instant results.
+            RIOT (Reasoning and Intelligence Online Test) is a scientifically
+            validated assessment measuring your cognitive abilities across
+            pattern recognition, logical reasoning, and spatial awareness. Free
+            to take, no sign-up, instant results.
           </p>
 
           <div className="mt-10 flex flex-col items-center justify-center gap-4 sm:flex-row">
             <Link href="/test" className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}>
-              Take the Free Test
+              Take the Free IQ Test
               <ChevronRight className="ml-1 size-4" />
             </Link>
             <Link href="#how-it-works" className={buttonVariants({ size: "lg", variant: "outline", className: "h-12 px-8 text-base" })}>
@@ -213,11 +268,11 @@ export default function Home() {
             Features
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Why Our Test Stands Out
+            Why the RIOT IQ Test Stands Out
           </h2>
           <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
             Built with psychometricians and validated against standardized IQ
-            benchmarks.
+            benchmarks including WAIS and the Stanford-Binet test.
           </p>
         </div>
 
@@ -250,7 +305,7 @@ export default function Home() {
             How It Works
           </Badge>
           <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Three Simple Steps
+            Three Simple Steps to Your IQ Score
           </h2>
         </div>
 
@@ -288,29 +343,24 @@ export default function Home() {
         </div>
 
         <div className="mt-16 grid gap-6 sm:grid-cols-3">
-          {testimonials.map((t) => (
-            <Card key={t.name} className="border-border/50 bg-card/50">
+          {testimonials.map((testimonial) => (
+            <Card key={testimonial.name} className="border-border/50 bg-card/50">
               <CardContent className="pt-6">
                 <div className="mb-4 flex items-center gap-1">
                   {Array.from({ length: 5 }).map((_, i) => (
-                    <Star
-                      key={i}
-                      className="size-3.5 fill-amber-400 text-amber-400"
-                    />
+                    <Star key={i} className="size-4 fill-indigo-400 text-indigo-400" />
                   ))}
                 </div>
                 <p className="text-sm leading-relaxed text-muted-foreground">
-                  &ldquo;{t.text}&rdquo;
+                  &ldquo;{testimonial.text}&rdquo;
                 </p>
-                <Separator className="my-4" />
-                <div className="flex items-center justify-between">
+                <div className="mt-4 flex items-center justify-between">
                   <div>
-                    <p className="text-sm font-medium">{t.name}</p>
-                    <p className="text-xs text-muted-foreground">{t.role}</p>
+                    <div className="text-sm font-semibold">{testimonial.name}</div>
+                    <div className="text-xs text-muted-foreground">{testimonial.role}</div>
                   </div>
-                  <Badge variant="secondary" className="font-mono">
-                    <Trophy className="mr-1 size-3" />
-                    IQ {t.score}
+                  <Badge variant="outline" className="border-indigo-500/30 bg-indigo-500/10 text-indigo-300">
+                    IQ {testimonial.score}
                   </Badge>
                 </div>
               </CardContent>
@@ -319,63 +369,91 @@ export default function Home() {
         </div>
       </section>
 
-      {/* CTA */}
-      <section className="border-t border-border/50 bg-muted/30">
-        <div className="mx-auto max-w-2xl px-4 py-24 text-center sm:px-6">
-          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
-            Ready to Find Out?
-          </h2>
-          <p className="mt-4 text-lg text-muted-foreground">
-            Join 2.4 million people who&apos;ve discovered their true cognitive
-            potential. Free, instant, no signup.
-          </p>
-          <Link href="/test" className={buttonVariants({ size: "lg", className: "mt-8 h-12 px-8 text-base" })}>
-            Take the Free IQ Test
-            <ArrowRight className="ml-2 size-4" />
-          </Link>
+      <Separator className="mx-auto max-w-6xl" />
 
-          <div className="mt-8 flex flex-wrap items-center justify-center gap-6 text-sm text-muted-foreground">
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              No signup required
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Free forever
-            </span>
-            <span className="flex items-center gap-1">
-              <CheckCircle className="size-3.5 text-emerald-500" />
-              Instant results
-            </span>
-          </div>
+      {/* FAQ */}
+      <section id="faq" className="mx-auto max-w-3xl px-4 py-24 sm:px-6">
+        <div className="text-center">
+          <Badge variant="outline" className="mb-4">
+            FAQ
+          </Badge>
+          <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+            Frequently Asked Questions
+          </h2>
+          <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+            Everything you need to know about the RIOT IQ Test.
+          </p>
+        </div>
+
+        <div className="mt-16 space-y-8">
+          {faqs.map((faq) => (
+            <div key={faq.question} className="rounded-xl border border-border/50 bg-card/50 p-6">
+              <h3 className="text-base font-semibold">{faq.question}</h3>
+              <p className="mt-3 text-sm leading-relaxed text-muted-foreground">
+                {faq.answer}
+              </p>
+            </div>
+          ))}
+        </div>
+      </section>
+
+      <Separator className="mx-auto max-w-6xl" />
+
+      {/* CTA */}
+      <section className="mx-auto max-w-3xl px-4 py-24 text-center sm:px-6">
+        <Trophy className="mx-auto mb-6 size-12 text-indigo-400" />
+        <h2 className="text-3xl font-bold tracking-tight sm:text-4xl">
+          Ready to Discover Your IQ?
+        </h2>
+        <p className="mx-auto mt-4 max-w-xl text-muted-foreground">
+          Join 2.4 million people who have taken the RIOT IQ Test. Free, accurate,
+          and takes just 20 minutes.
+        </p>
+        <div className="mt-8 flex flex-col items-center justify-center gap-4 sm:flex-row">
+          <Link
+            href="/test"
+            className={buttonVariants({ size: "lg", className: "h-12 px-8 text-base" })}
+          >
+            Start the Free IQ Test
+            <ChevronRight className="ml-1 size-4" />
+          </Link>
+        </div>
+        <div className="mt-6 flex items-center justify-center gap-6 text-sm text-muted-foreground">
+          <span className="flex items-center gap-1">
+            <CheckCircle className="size-4 text-green-500" /> No sign-up required
+          </span>
+          <span className="flex items-center gap-1">
+            <CheckCircle className="size-4 text-green-500" /> Instant results
+          </span>
+          <span className="flex items-center gap-1">
+            <CheckCircle className="size-4 text-green-500" /> 100% free
+          </span>
         </div>
       </section>
 
       {/* Footer */}
-      <footer className="border-t border-border/50">
-        <div className="mx-auto flex max-w-6xl flex-col items-center justify-between gap-4 px-4 py-8 sm:flex-row sm:px-6">
-          <div className="flex items-center gap-2">
-            <div className="flex size-6 items-center justify-center rounded-md bg-indigo-600">
-              <Brain className="size-3 text-white" />
-            </div>
-            <span className="text-sm font-semibold">
-              IQ<span className="text-indigo-400">Test</span>
-            </span>
+      <footer className="border-t border-border/50 bg-muted/20">
+        <div className="mx-auto max-w-6xl px-4 py-12 sm:px-6">
+          <div className="flex flex-col items-center justify-between gap-6 sm:flex-row">
+            <Link href="/" className="flex items-center gap-2">
+              <div className="flex size-7 items-center justify-center rounded-lg bg-indigo-600">
+                <Brain className="size-3.5 text-white" />
+              </div>
+              <span className="text-base font-bold tracking-tight">
+                IQ<span className="text-indigo-400">Test</span>
+              </span>
+            </Link>
+            <nav className="flex flex-wrap items-center justify-center gap-x-6 gap-y-2 text-sm text-muted-foreground">
+              <Link href="/about" className="hover:text-foreground transition-colors">About</Link>
+              <Link href="/articles" className="hover:text-foreground transition-colors">Articles</Link>
+              <Link href="/assessments/free-iq-test" className="hover:text-foreground transition-colors">Free IQ Test</Link>
+              <Link href="/privacy" className="hover:text-foreground transition-colors">Privacy</Link>
+              <Link href="/terms" className="hover:text-foreground transition-colors">Terms</Link>
+            </nav>
+            <p className="text-xs text-muted-foreground">
+              © {new Date().getFullYear()} RIOT IQ. All rights reserved.
+            </p>
           </div>
-          <div className="flex gap-6 text-xs text-muted-foreground">
-            <Link href="/privacy" className="hover:text-foreground">
-              Privacy Policy
-            </Link>
-            <Link href="/terms" className="hover:text-foreground">
-              Terms of Service
-            </Link>
-            <Link href="/about" className="hover:text-foreground">
-              About Our Methodology
-            </Link>
-          </div>
-          <p className="text-xs text-muted-foreground">
-            &copy; 2026 IQTest. All rights reserved.
-          </p>
         </div>
       </footer>
     </>
