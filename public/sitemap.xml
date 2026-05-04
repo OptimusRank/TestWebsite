@@ -4,46 +4,143 @@
         xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9
         http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd">
 
+  <!-- Core pages -->
   <url>
     <loc>https://www.riotiq.com/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
 
   <url>
-    <loc>https://www.riotiq.com/test/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://www.riotiq.com/assessments/free-iq-test</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>weekly</changefreq>
+    <priority>0.95</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/assessments/full</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
     <priority>0.9</priority>
   </url>
 
   <url>
-    <loc>https://www.riotiq.com/about/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://www.riotiq.com/about</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.7</priority>
   </url>
 
   <url>
-    <loc>https://www.riotiq.com/contact/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://www.riotiq.com/contact</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>monthly</changefreq>
     <priority>0.6</priority>
   </url>
 
   <url>
-    <loc>https://www.riotiq.com/privacy/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://www.riotiq.com/privacy</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
   </url>
 
   <url>
-    <loc>https://www.riotiq.com/terms/</loc>
-    <lastmod>2024-01-15</lastmod>
+    <loc>https://www.riotiq.com/terms</loc>
+    <lastmod>2025-05-01</lastmod>
     <changefreq>yearly</changefreq>
     <priority>0.4</priority>
+  </url>
+
+  <!-- IQ Scores & Interpretation articles -->
+  <url>
+    <loc>https://www.riotiq.com/articles/iq-scores-and-interpretation/understanding-iq-score-scales-a-complete-guide</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/iq-scores-and-interpretation/what-is-the-iq-scale-range</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/iq-scores-and-interpretation/what-is-the-highest-possible-iq</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Famous People & IQ articles -->
+  <url>
+    <loc>https://www.riotiq.com/articles/famous-people-and-iq/what-is-elon-musk-s-iq</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/famous-people-and-iq/what-is-trump-s-iq</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Average IQ & Demographics articles -->
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-by-age</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-in-india</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-in-the-usa</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/average-iq-and-demographics/what-is-the-average-iq-</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Advanced Topics & Research articles -->
+  <url>
+    <loc>https://www.riotiq.com/articles/advanced-topics-and-research/do-males-and-females-have-the-same-distribution-of-iq-scores-</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Online IQ Tests articles -->
+  <url>
+    <loc>https://www.riotiq.com/articles/online-iq-tests/free-iq-tests</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://www.riotiq.com/articles/online-iq-tests/what-is-the-best-iq-test</loc>
+    <lastmod>2025-05-01</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
   </url>
 
 </urlset>
