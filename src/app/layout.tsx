@@ -13,21 +13,40 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Free IQ Test Online | Certified Intelligence Assessment",
+  metadataBase: new URL("https://www.riotiq.com"),
+  title: {
+    default: "RIOT IQ Test — Free, Accurate & Instant Results",
+    template: "%s | RIOT IQ Test",
+  },
   description:
-    "Take our free online IQ test and get your score in minutes. Scientifically validated questions, instant results, and a detailed cognitive breakdown.",
+    "Take the RIOT IQ Test free — 40 scientifically validated questions, results in 20 minutes, no registration. Trusted by 2.4M+ test-takers worldwide.",
   keywords: [
     "IQ test",
-    "intelligence test",
     "free IQ test",
+    "RIOT IQ test",
     "online IQ test",
+    "real IQ test",
+    "best IQ test",
+    "accurate IQ test",
+    "intelligence test",
     "cognitive assessment",
   ],
   openGraph: {
-    title: "Free IQ Test Online | Certified Intelligence Assessment",
+    title: "RIOT IQ Test — Free, Accurate & Instant Results",
     description:
-      "Take our free online IQ test and get your score in minutes. Scientifically validated, instant results.",
+      "Take the RIOT IQ Test free — 40 scientifically validated questions, results in 20 minutes, no registration. Trusted by 2.4M+ test-takers.",
     type: "website",
+    url: "https://www.riotiq.com",
+    siteName: "RIOT IQ Test",
+  },
+  twitter: {
+    card: "summary_large_image",
+    title: "RIOT IQ Test — Free, Accurate & Instant Results",
+    description:
+      "Take the RIOT IQ Test free — 40 scientifically validated questions, results in 20 minutes, no registration.",
+  },
+  alternates: {
+    canonical: "/",
   },
 };
 
@@ -39,10 +58,29 @@ export default function RootLayout({
   const organizationSchema = {
     "@context": "https://schema.org",
     "@type": "Organization",
-    "name": "Free IQ Test Online",
-    "url": "https://www.example.com",
-    "logo": "https://www.example.com/logo.png",
-    "description": "Professional online IQ testing service providing scientifically validated intelligence assessments with instant results and detailed cognitive analysis."
+    name: "RIOT IQ Test",
+    url: "https://www.riotiq.com",
+    logo: "https://www.riotiq.com/logo.png",
+    description:
+      "RIOT (Reasoning and Intelligence Online Test) — a free, scientifically validated IQ test trusted by 2.4 million test-takers worldwide.",
+    sameAs: ["https://forum.riotiq.com"],
+  };
+
+  const websiteSchema = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "RIOT IQ Test",
+    url: "https://www.riotiq.com",
+    description:
+      "Free, accurate IQ test online. Get your score, percentile, and cognitive breakdown in 20 minutes.",
+    potentialAction: {
+      "@type": "SearchAction",
+      target: {
+        "@type": "EntryPoint",
+        urlTemplate: "https://www.riotiq.com/search?q={search_term_string}",
+      },
+      "query-input": "required name=search_term_string",
+    },
   };
 
   return (
@@ -53,7 +91,13 @@ export default function RootLayout({
       <head>
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(organizationSchema) }}
+          dangerouslySetInnerHTML={{
+            __html: JSON.stringify(organizationSchema),
+          }}
+        />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(websiteSchema) }}
         />
       </head>
       <body className="min-h-full flex flex-col bg-background text-foreground">
